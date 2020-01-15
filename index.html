@@ -105,7 +105,7 @@
                                     <h1 class="text-white text-center"><i class="fas fa-coins"></i> <span id="myCropTokens"></span></h1>
                                     <span class="text-success">
                                         <i class="fab fa-ethereum"></i> <span id="myETCValue"></span> ETC<br />
-                                        <a class="text-success" href="#">Need more ETC?</a>
+                                        <a class="text-success" href="#" data-toggle="modal" data-target="#buyETCModal">Need more ETC?</a>
                                     </span>
                                 </div>
                             </div>
@@ -453,6 +453,41 @@
             </div>
         </div>
         </div>
+        
+        <div class="modal" id="buyETCModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-primary">
+                    <h4 class="modal-title text-white"><i class="fas fa-long-arrow-alt-right"></i>  Buy ETC</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div class="modal-body bg-primary text-white">
+                    <div class="container">
+                        <div class="row">
+                            <ul>
+                                <li><a href="https://binance.com" target="_blank" class="text-success">Binance.com - Global</a></li>
+                                
+                                <li><a href="https://changelly.com" target="_blank" class="text-success">Changelly.com - Global</a></li>
+                                
+                                <li><a href="https://moonpay.io" target="_blank" class="text-success">Moonpay.io - Global</a></li>
+                                
+                                <li><a href="https://bestchange.com" target="_blank" class="text-success">Bestchange.com - RU, Asia</a></li>
+                                
+                                <li><a href="https://coinbase.com" target="_blank" class="text-success">Coinbase.com - USA, EU, AU</a></li>
+                                
+                                <li><a href="https://coinspot.com.au" target="_blank" class="text-success">Coinspot.com.au - AU</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer bg-primary">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
     
         <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-primary">
             <a class="navbar-brand" href="#"></a>
