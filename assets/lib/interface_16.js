@@ -457,7 +457,7 @@ abi = [
 ]
 
 //
-	contractAddress = "0xFCe94193c3847a11920787274CF1Cf7Ea7DE73A1"  // Alien Mainnet
+	contractAddress = "0x2d98209444487B2260da23C10ECB444100E2Cf51"  // Alien Mainnet
 //
 
 function buyEggs(eth,callback){
