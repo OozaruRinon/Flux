@@ -58,9 +58,21 @@
                         <a class="dropdown-item text-white" href="#" data-toggle="modal" data-target="#sponsorDetailsModal" target="_blank">Current Broadcast</a>
                     </div>
                 </li>
-                <li class="nav-item"><a class="nav-link" href="racearena.html"><i class="fas fa-car text-success"></i> Race Arena</a></li>
-                <li class="nav-item"><a class="nav-link" href="powerinc.html"><i class="fas fa-bolt text-success"></i> Power Inc</a></li>
-                <li class="nav-item"><a class="nav-link" href="vault.html"><i class="fas fa-piggy-bank text-success"></i> Vault</a></li>
+                
+                <li class="nav-item dropdown">
+                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        <i class="fas fa-cubes text-success"></i> Dapps <span class="caret"></span>
+                    </a>
+
+                    <div class="dropdown-menu dropdown-menu-right border-success bg-primary text-white" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item text-white" href="racearena.html"><i class="fas fa-flag-checkered text-success"></i> Race Arena</a>
+                        <a class="dropdown-item text-white" href="powerinc.html"><i class="fas fa-bolt text-success"></i> Power Inc</a>
+                        <a class="dropdown-item text-white" href="vault.html"><i class="fas fa-piggy-bank text-success"></i> Vault</a>
+                    </div>
+                </li>
+
+                <li class="nav-item"><a class="nav-link" href="https://discord.gg/7fCvU2h" target="_blank"><i class="fab fa-discord text-success"></i> Discord</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://twitter.com/ArcadiumETC" target="_blank"><i class="fab fa-twitter text-success"></i> Twitter</a></li>
             </ul>
             
             <ul class="navbar-nav ml-auto">
@@ -173,6 +185,7 @@
                         <a class="btn btn-md btn-block btn-outline-success" id="rainMaker"><i class="fas fa-cloud text-success"></i> Activate Rainmaker</a><br />
                     </div> 
                     <div class="card-footer bg-primary text-white">
+                        
                     </div>
                 </div>
                 <br />
@@ -193,6 +206,12 @@
                     </div>  
                 </div>
                 <br />
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col">
+                <a class="btn btn-block btn-success" href="#" data-toggle="modal" data-target="#informationModal">What is this?</a><br />
             </div>
         </div>
     
@@ -229,7 +248,7 @@
                 <ul class="list-unstyled text-small">
                     <li><a class="text-muted" href="https://twitter.com/ArcadiumETC" target="_blank">Twitter</a></li>
                     <li><a class="text-muted" href="https://instagram.com/arcadiumnetwork" target="_blank">Instagram</a></li>
-                    <li><a class="text-muted" href="https://t.me/ArcadiumNetwork" target="_blank">Telegram</a></li>
+                    <li><a class="text-muted" href="https://discord.gg/7fCvU2h" target="_blank">Discord</a></li>
                 </ul>
             </div>
         </div>
@@ -276,6 +295,38 @@
             </div>
         </div>
     </div>
+        
+        <div class="modal" id="informationModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title"><i class="fas fa-dollar-sign"></i>  What is This?</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <div class="modal-body" id="buyArea">
+                        <h3>Compound Dividends</h3>
+                        <p>When others Buy and Sell their points, you will earn Dividends proportionate to how many points you hold. These Dividends are awarded in ETC, so you have a couple of options. If you choose to compound your Dividends, the ETC you have earned from others will be used to buy more Points, thus meaning you could earn more at a faster rate.</p>
+                        <br />
+                        
+                        <h3>Withdraw Dividends</h3>
+                        <p>If you build up a nice amount of Dividends, you may choose not to buy more Points, but instead withdraw the ETC to your wallet. Should this be what you desire, tapping &quot;Withdraw Dividends&quot; is your answer.</p>
+                        <br />
+                        
+                        <h3>Activate Divies</h3>
+                        <p>Divies is a Smart Contract connected to Commonwealth, which receives ETC and distributes it to holders of Points. One can contribute to Divies either by sending ETC directly to it's <a href="https://blockscout.com/etc/mainnet/address/0xd1a231ae68ebe7aec3ecdaeac4c0776eb525d969/transactions" target="_blank" class="text-success">Contract Address</a>, or by using a Dapp or service like the <a href="https://commonwealth.gg/sponsor.html" target="_blank" class="text-success">Broadcaster</a>.</p>
+                        <br />
+                        
+                        <h3>Activate RainMaker</h3>
+                        <p>RainMaker is a special Smart Contract: It provides a guaranteed Price Floor for the Commonwealth Vault - RainMaker can only buy and receive more Points - it can never sell, spend or send them anywhere at all. <a href="https://medium.com/@masterhax/what-is-the-rainmaker-contract-bb0a77bc3b91" target="_blank" class="text-success">Learn More Here via the Medium Post about Rainmaker</a>.</p>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     
     <!-- Modals -->
     <div class="modal" id="buyTokensModal">

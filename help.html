@@ -19,13 +19,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/semantic.min.css">
     <link rel="stylesheet" href="assets/css/alertify.min.css" />
 
     <link rel="stylesheet" href="assets/css/farmer.css" />
     <link rel="stylesheet" href="assets/css/animate.css" />
     <link rel="stylesheet" href="assets/css/professional_style.css" />
     <link rel="stylesheet" href="assets/css/themes/default.min.css" />
+    
     
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
@@ -58,21 +58,9 @@
                         <a class="dropdown-item text-white" href="#" data-toggle="modal" data-target="#sponsorDetailsModal" target="_blank">Current Broadcast</a>
                     </div>
                 </li>
-                
-                <li class="nav-item dropdown">
-                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                        <i class="fas fa-cubes text-success"></i> Dapps <span class="caret"></span>
-                    </a>
-
-                    <div class="dropdown-menu dropdown-menu-right border-success bg-primary text-white" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item text-white" href="racearena.html"><i class="fas fa-flag-checkered text-success"></i> Race Arena</a>
-                        <a class="dropdown-item text-white" href="powerinc.html"><i class="fas fa-bolt text-success"></i> Power Inc</a>
-                        <a class="dropdown-item text-white" href="vault.html"><i class="fas fa-piggy-bank text-success"></i> Vault</a>
-                    </div>
-                </li>
-
-                <li class="nav-item"><a class="nav-link" href="https://discord.gg/7fCvU2h" target="_blank"><i class="fab fa-discord text-success"></i> Discord</a></li>
-                <li class="nav-item"><a class="nav-link" href="https://twitter.com/ArcadiumETC" target="_blank"><i class="fab fa-twitter text-success"></i> Twitter</a></li>
+                <li class="nav-item"><a class="nav-link" href="racearena.html"><i class="fas fa-car text-success"></i> Race Arena</a></li>
+                <li class="nav-item"><a class="nav-link" href="powerinc.html"><i class="fas fa-bolt text-success"></i> Power Inc</a></li>
+                <li class="nav-item"><a class="nav-link" href="vault.html"><i class="fas fa-piggy-bank text-success"></i> Vault</a></li>
             </ul>
             
             <ul class="navbar-nav ml-auto">
@@ -93,66 +81,111 @@
     <br />
     <br />
     <br />
-
-    <div id="dapp" class="container">
-        <div class="row jumbotron bg-primary text-white animated fadeInDown delay-2s">
-            <div class="container">
-                <h1 class="display-3 text-white">Vault</h1>
-                <p class="text-white"><i>Time-Locked Wallets on Ethereum Classic</i></p>
-                <div class="row">
-                    <div class="col">
-                        <a href="#" class="btn btn-success btn-block" data-toggle="modal" data-target="#depositModal">Deposit</a><br />
-                    </div>
-                    <div class="col">
-                        <a href="#" class="btn btn-warning btn-block" data-toggle="modal" data-target="#withdrawModal">Withdraw</a><br />
+    <br />
+    
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card border-success animated fadeIn delay-1s">
+                    <div class="card-header bg-primary text-white">
+                        <div id="current"></div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <a href="#" class="btn btn-info btn-block" data-toggle="modal" data-target="#newWalletModal">New Wallet</a><br />
-                    </div>
-                </div>
+                <br />
             </div>
         </div>
         
         <div class="row">
             <div class="col-md-6">
-                <div class="card border-success animated fadeInLeft delay-2s">
-                    <div class="card-header bg-primary text-white">What is Vault?</div>
+                <div class="card border-success animated fadeInLeft delay-3s">
+                    <div class="card-header bg-primary text-white"><i class="fas fa-question text-success"></i> Help &amp; Support</div>
+                    
                     <div class="card-body bg-primary text-white">
-                        <p class="text-center">Vault is an implementation of "Time-Locked Wallets", originally by <i class="text-success" target="_blank">Radek Ostrofski</i> - modified just to hold ETC.</p>
-                        <p class="text-center"><b class="text-danger">WARNING: </b>Do not deposit anything other than ETC to your wallet contracts!</p>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col text-center">
+                                    <h1 class="text-white text-center">What is Arcadium Network?</h1>
+                                    <p>Arcadium Network is a project platform built upon ETC. Founded in 2019 and shared openly ever since, Arcadium Network is an effort to enable people with their own money - whether they wish to earn more or use it in effective ways, the choice should be theirs. Flux, Vault, Power Inc and others are just a few ways this is achieved - and more is continually in progress!</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-footer bg-primary text-white"></div>
+                    
+                    <div class="card-footer bg-primary text-white">
+                        <div class="row">
+                            <div class="col">
+                                <a class="btn btn-block btn-info" href="#" data-toggle="modal" data-target="#buyETCModal">Buy ETC</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <br />
             </div>
             
             <div class="col-md-6">
-                <div class="card border-success animated fadeInRight delay-2s">
-                    <div class="card-header bg-primary text-white">Features</div>
-                    <div class="card-body bg-primary text-white">
-                        <ul>
-                            <li>Create as many wallet contracts as you like</li>
-                            <li>Deposit ETC to your wallets any time</li>
-                            <li>Withdraw ETC only when it&apos;s time</li>
-                            <li>Optionally assign a beneficiary other than yourself</li>
-                        </ul>
-                    </div>
-                    <div class="card-footer bg-primary text-white"></div>
+                <div class="card border-success animated fadeInRight delay-3s">
+                    <div class="card-header bg-primary text-white">Commonwealth</div>
+                        <ul class="list-group bg-primary">
+                        <li class="list-group-item d-flex justify-content-between align-items-center bg-primary text-success">
+                            My Dividends <span class="badge badge-success badge-pill">
+                            <i class="fab fa-ethereum"></i> <span id="myCropDividends"></span> ETC
+                            </span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center bg-primary text-success">
+                            Divies<span class="badge badge-success badge-pill">
+                            <i class="fab fa-ethereum"></i> <span id="diviesBalance"></span> ETC</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center bg-primary text-success">
+                            RainMaker<span class="badge badge-success badge-pill">
+                            <i class="fas fa-coins"></i> <span id="rainMakerTokens"></span> (<i class="fab fa-ethereum"></i> <span id="rainMakerDividends"></span> ETC)
+                            </span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center bg-primary text-success">
+                            Dividends Paid to Holders<span class="badge badge-success badge-pill">
+                            <i class="fas fa-coins"></i> <span id="totalDividends"></span> <i>(<span id="dividendsUSD"></span> USD)</i>
+                            </span>
+                        </li>
+                    </ul>
                 </div>
                 <br />
             </div>
         </div>
+        
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card border-success animated fadeInLeft delay-3s">
+                    <div class="card-header bg-primary text-white">Actions</div>
+                    <div class="card-body bg-primary text-white">
+                        <a class="btn btn-md btn-block btn-outline-success" id="reinvest"><i class="fas fa-recycle text-success"></i> Compound Dividends</a><br />
+                        <a class="btn btn-md btn-block btn-outline-success" id="withdraw"><i class="fas fa-wallet text-success"></i> Withdraw Dividends</a><br />
+                        <a class="btn btn-md btn-block btn-outline-success" id="distribute"><i class="fas fa-info text-success"></i> Activate Divies</a><br />
+                        <a class="btn btn-md btn-block btn-outline-success" id="rainMaker"><i class="fas fa-cloud text-success"></i> Activate Rainmaker</a><br />
+                    </div> 
+                    <div class="card-footer bg-primary text-white">
+                    </div>
+                </div>
+                <br />
+                
+                
+            </div>
             
-        <div id="created-wallets" class="row jumbotron bg-primary text-white animated fadeInUp delay-2s">
-            <div class="col">
-                <h3 class="text-white">My Wallets</h3>
-                <table id="wallets-table" class="table table-hover arcadiumElementDark1 text-white"></table><br />
+            <div class="col-md-6">
+                <div class="card border-success animated fadeInRight delay-3s">
+                    <div class="card-header bg-primary text-white">Price</div>
+                    <div class="card-body bg-primary text-white">
+                        <svg id="container"></svg><br />
+                        <a href="https://www.xenobank.com/" class="text-success text-center" target="_blank" style="font-size:10px;">(More Data at Xenobank.com)</a>
+                    </div>
+                    
+                    <div class="card-footer bg-primary text-white">
+                        
+                    </div>  
+                </div>
+                <br />
             </div>
         </div>
-        
-        <footer class="container jumbotron bg-primary py-5 animated fadeInUp delay-3s">
+    
+    <footer class="container jumbotron bg-primary py-5">
         <div class="row">
             <div class="col-12 col-md">
                 <small class="d-block mb-3 text-muted">Thank you for stopping by! If you find this site useful, I could always do with another coffee (or some more ETC)! Have a great day!</small>
@@ -190,156 +223,32 @@
             </div>
         </div>
     </footer>
-    </div>
-    
-    <div class="modal" id="newWalletModal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-
-                <!-- Modal Header -->
-                <div class="modal-header bg-primary">
-                    <h4 class="modal-title text-white">New Wallet</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-
-                <!-- Modal body -->
-                <div class="modal-body bg-primary text-white">
-                    <form id="create-wallet-form">
-                        <div class="form-group">
-                            <label for="ethereumAddress">Receiver Address</label>
-                            <input id="ethereumAddress" type="text" class="form-control" placeholder="Reciever eth address">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="unlockDate">Unlock Time (UTC)</label>
-                            <input id="unlockDate" type="datetime-local" class="form-control">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="etherAmount"><i>(Optional)</i> ETC Amount</label>
-                            <input id="etherAmount" type="number" min="0" step="0.001" class="form-control" placeholder="ETH amount">
-                            <small>Enter an amount of ETC if you wish to create this wallet with initial value. You <b>MUST</b> have the available balance in your main wallet - this is not a magical ETC fountain.</small>
-                        </div>
-                    <button type="submit" class="btn btn-success btn-block text-white">Create Wallet</button>
-                </form>
-                </div>
-
-                <!-- Modal footer -->
-                <div class="modal-footer bg-primary text-white">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    
-    <div class="modal" id="depositModal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-
-                <!-- Modal Header -->
-                <div class="modal-header bg-primary text-white">
-                    <h4 class="modal-title text-white">Deposit ETC</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-
-                <!-- Modal body -->
-                <div class="modal-body bg-primary text-white">
-                    <form id="topup-wallet-form">
-                        <div class="form-group">
-                            <label for="knownWalletAddresses">Target Wallet Contract Address</label>
-                            <select class="form-control" id="knownWalletAddresses">
-                            </select>
-                        </div>
+    <br />
+    <br />
  
-                        <div class="form-group">
-                            <label for="amount">Amount</label>
-                            <input id="amount" type="number" min="0" step="0.001" class="form-control" placeholder="Currency amount">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="currency">Currency</label>
-                            <select class="form-control" id="currency">
-                                <option value="ether">Ethereum Classic (ETC)</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="btn btn-success btn-block text-white">Deposit ETC</button>
-                    </form>
-                </div>
-
-                <!-- Modal footer -->
-                <div class="modal-footer bg-primary text-white">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    
-    <div class="modal" id="withdrawModal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-
-                <!-- Modal Header -->
-                <div class="modal-header bg-primary text-white">
-                    <h4 class="modal-title">Withdraw ETC</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-
-                <!-- Modal body -->
-                <div class="modal-body bg-primary text-white">
-                    <form id="claim-funds-form">
-                        <div class="col form-group">
-                            <label for="claimWalletAddresses">Wallet Contract Address</label>
-                            <select class="form-control" id="claimWalletAddresses">
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="unlockIn">Unlock Time</label>
-                            <input id="unlockIn" type="text" disabled class="form-control" placeholder="Unlock time">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="claimableAmount">Claimable Amount</label>
-                            <input id="claimableAmount" type="number" disabled class="form-control" placeholder="Currency amount">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="claimableCurrency">Currency</label>
-                            <select class="form-control" id="claimableCurrency">
-                                <option value="ether">Ethereum Classic (ETC)</option>
-                            </select>
-                        </div>
-                    <button type="submit" id="claim-submit-button" class="btn btn-warning btn-block text-white">Withdraw ETC</button>
-                </form>
-                </div>
-
-                <!-- Modal footer -->
-                <div class="modal-footer bg-primary text-white">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    
     <div class="modal" id="donateModal">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header bg-primary text-white">
+                <div class="modal-header">
                     <h4 class="modal-title"><i class="fas fa-long-arrow-alt-right"></i>  Donate to Arcadium</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
 
-                <div class="modal-body bg-primary text-white">
+                <div class="modal-body">
                     <div class="container">
                         <div class="row">
                             <div class="col text-center">
-                                <b>Ethereum Classic</b><br />
+                                <b>Send me some Points</b>
                                 <img src="https://chart.googleapis.com/chart?chs=150x150&amp;cht=qr&amp;chl=0x8C3384569C5174E8Fe196b007fBbf4557475c6F5&amp;choe=UTF-8" alt="Flux Donations Address">
                                 <br />
-                                <small>Donating ETC to Arcadium helps to fund and motivate further development!</small><br />
+                                <small>Donating Points to Arcadium helps to motivate further development!</small><br />
+                            </div>
+                            
+                            <div class="col text-center">
+                                <b>Send Divies some ETC</b>
+                                <img src="https://chart.googleapis.com/chart?chs=150x150&amp;cht=qr&amp;chl=0xd1A231ae68eBE7Aec3ECDAEAC4C0776eB525D969&amp;choe=UTF-8" alt="Flux Donations Address">
+                                <br />
+                                <small>Donating ETC to Divies helps the entire Commonwealth! Thank You!</small><br />
                             </div>
                         </div>
                     </div>
@@ -350,39 +259,87 @@
                     <p>Thank you very much for considering a donation to Arcadium! Before you continue, please be aware that anything sent to Arcadium addresses cannot be refunded - so please, only send what you can absolutely afford. Donations received by Arcadium will be used to fund future development efforts and new projects. Donations of ETC to Divies will help the entire Commonwealth.</p>
                 </div>
 
-                <div class="modal-footer bg-primary text-white">
+                <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
     </div>
     
-    <div class="modal" id="faqsModal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header bg-primary text-white">
-                    <h4 class="modal-title text-white"><i class="fas fa-long-arrow-alt-right"></i>  FAQs</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
+    <!-- Modals -->
+    <div class="modal" id="buyTokensModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title"><i class="fas fa-dollar-sign"></i>  Buy Points</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
 
-                <div class="modal-body bg-primary text-white">
-                    <h3 class="text-white">How does this work?</h3>
-                    <p>Arcadium Vault offers a Smart Contract Interface which allows you to create Time-locked Wallet Contracts - so, you can create a &quot;Lockbox&quot; that only opens for a particular address at a certain date and time! What's better, is you can choose the address which can open the wallet and receive its contents - deposit anytime, open only when it&apos;s time!</p>
-                    <hr />
-                    <h3 class="text-white">Can I withdraw from the Wallet before time is reached?</h3>
-                    <p>No. We would advise not even trying.</p>
-                    <hr />
-                    <h3 class="text-white">Can I add to the wallet balance before time is reached?</h3>
-                    <p>You can add ETC to the wallet balance at ANY time!</p>
-                </div>
+                    <div class="modal-body" id="buyArea">
+                        <h3><strong>Price: </strong><span id="tokenBuyGet">0.0000</span></h3>
+                        <small>Right now, 1 Point costs <b><span id="priceUSD"></span> USD</b>.</small>
+                        <input placeholder="ETC to Spend..." class="form-control" type="text" id="buyInput"><br />
+                        <button id="buy" class="btn btn-block btn-success">Buy Points</button>
+                        <div id="buyAmount" class="ui fluid large basic green button approx no click buy-amount">
+                            <i>How much will you buy?</i>
+                        </div>
+                    </div>
 
-                <div class="modal-footer bg-primary text-white">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+        
+        <div class="modal" id="sellTokensModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title"><i class="fas fa-dollar-sign"></i>  Sell Points</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <div class="modal-body">
+                        <h3 class="text-white"><strong>Price: </strong><span class="buy-price" id="tokenSellGet">0.00</span></h3>
+                        <input placeholder="Points to Sell..." class="form-control" type="text" id="sellInput"><br />
+                        <button id="sell" class="btn btn-block btn-danger">Sell Points</button>
+                        <div id="sellAmount" class="ui fluid large basic blue button no click approx" style="margin-top:10px;">
+                            <i>How much will you sell?</i>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal" id="transferTokensModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title"><i class="fas fa-long-arrow-alt-right"></i>  Transfer Points</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <div class="modal-body">
+                        <b>Pure Address:</b> <span id="myCropAddress" class="approx"></span>
+                        <button id="copyAddressButton" class="btn btn-block btn-warning" data-clipboard-text=""><i class="copy icon"></i> Copy Address</button><br />
+                        <input type="text" id="transferAddress" class="form-control" placeholder="Destination Address"><br />
+                        <input type="text" id="transferTokenCount" class="form-control" placeholder="Amount of Points"><br />
+                        <button id="transfer" class="btn btn-block btn-info"><i class="right arrow icon"></i> Transfer</button>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     
+    <!-- Sponsor Modals -->
     <div class="modal" id="sponsorPurchaseModal">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -472,26 +429,73 @@
                     <div class="modal-body">
                         <div id="currentImg" class="sponsorPrice">1234/token</div>
                         <h3><span id="currentText" class="sponsorPrice">1234/token</span></h3>
-                        <p><span id="currentLinkText" class="sponsorPrice">1234/token</span></p>
-                        <span id="currentLink" class="btn btn-block btn-primary">1234/token</span>
-                        <hr />
-                        <p>
-                            <b>Owner <span id="owner"></span></b>
-                            <i><span id="time" class="sponsorPrice"></span><span id="purchasePrice" class="sponsorPrice"></span></i>
-                        </p>
-                    </div>
+                    <p><span id="currentLinkText" class="sponsorPrice">1234/token</span></p>
+                    <span id="currentLink" class="btn btn-block btn-primary">1234/token</span>
+                    <hr />
+                    <p>
+                        <b>Owner <span id="owner"></span></b>
+                        <i><span id="time" class="sponsorPrice"></span><span id="purchasePrice" class="sponsorPrice"></span></i>
+                    </p>
+                </div>
 
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                    </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
+        </div>
+        
+        <div class="modal" id="buyETCModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-primary">
+                    <h4 class="modal-title text-white"><i class="fas fa-long-arrow-alt-right"></i>  Buy ETC</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div class="modal-body bg-primary text-white">
+                    <div class="container">
+                        <div class="row">
+                            <ul>
+                                <li><a href="https://binance.com" target="_blank" class="text-success">Binance.com - Global</a></li>
+                                
+                                <li><a href="https://changelly.com" target="_blank" class="text-success">Changelly.com - Global</a></li>
+                                
+                                <li><a href="https://moonpay.io" target="_blank" class="text-success">Moonpay.io - Global</a></li>
+                                
+                                <li><a href="https://bestchange.com" target="_blank" class="text-success">Bestchange.com - RU, Asia</a></li>
+                                
+                                <li><a href="https://coinbase.com" target="_blank" class="text-success">Coinbase.com - USA, EU, AU</a></li>
+                                
+                                <li><a href="https://coinspot.com.au" target="_blank" class="text-success">Coinspot.com.au - AU</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer bg-primary">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
     
+        <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-primary">
+            <a class="navbar-brand" href="#"></a>
+            <div class="navbar-collapse collapse" id="navbarCollapse" style="">
+                <ul class="navbar-nav mr-auto">
+          
+                </ul>
+          
+                <ul class="navbar-nav ml-auto">
+            
+                </ul>
+            </div>
+        </nav>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
     <script src="assets/js/jquery.lazyload.min.js"></script>
     <script src="assets/js/jquery.validation.min.js"></script>
     <script src="assets/js/tether.min.js"></script>
@@ -504,9 +508,6 @@
     <script src="assets/js/clipboard.min.js"></script>
     <script src="assets/js/lodash.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
-    
-    <script src="assets/js/moment.timezone.min.js "></script>
-    <script src="assets/js/truffle-contract.min.js"></script>
 
     <script src="assets/lib/util.js"></script>
     <script src="assets/lib/home.js"></script>
@@ -518,6 +519,5 @@
     <script src="assets/lib/use.js"></script>
     <script src="assets/lib/charts.js"></script>
     <script src="assets/lib/prices.js"></script>
-    <script src="assets/lib/vault.js"></script>
 </body>
 </html>
