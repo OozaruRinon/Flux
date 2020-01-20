@@ -142,7 +142,7 @@ function offervault() {
 	}
 }
 	
-function withdraw() {
+function withdrawArenaDivs() {
 	sacrific3CInstance.withdraw(function(error, result){})
 }
 	
@@ -289,10 +289,10 @@ function checkAltar() {
 		el('#vault').innerHTML = earningsString;
 		if(result > 0) {
 			el('#vault').innerHTML +=' <b>' + web3.fromWei(result, 'ether').toFixed(8) + ' ETC</b>';
-			el('#withdraw').disabled = false;
+			el('#withdrawArenaDivs').disabled = false;
 		} else {
 			el('#vault').innerHTML += ' <b>0 ETC</b>';
-			el('#withdraw').disabled = true;
+			el('#withdrawArenaDivs').disabled = true;
 		}
 		if(result >= offerSize) {
 			el('#offervault').disabled = false;
@@ -305,7 +305,7 @@ function checkAltar() {
 function changeStaticText() {
 	el('#offer').src = offerButtonString;
 	el('#offervault').innerHTML = offerVaultButtonString;
-	el('#withdraw').innerHTML = withdrawButtonString;
+	el('#withdrawArenaDivs').innerHTML = withdrawButtonString;
 	el('#validate').innerHTML = validateButtonString;
 }
 
