@@ -60,19 +60,21 @@
         <div class="collapse navbar-collapse" id="navbarColor02">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item"><a class="nav-link" href="flux.html"><i class="fas fa-coins text-success"></i> Flux</a></li>
+                <li class="nav-item"><a class="nav-link" href="vault.html"><i class="far fa-clock text-success"></i> Timelock</a></li>
                 
                 <li class="nav-item dropdown">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                        <i class="fas fa-cubes text-success"></i> Dapps <span class="caret"></span>
+                        <i class="fas fa-dice text-success"></i> Games <span class="caret"></span>
                     </a>
 
                     <div class="dropdown-menu dropdown-menu-right border-success bg-primary text-white" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item text-white" href="racearena.html"><i class="fas fa-flag-checkered text-success"></i> Race Arena</a>
                         <a class="dropdown-item text-white" href="powerinc.html"><i class="fas fa-bolt text-success"></i> Power Inc</a>
-                        <a class="dropdown-item text-white" href="vault.html"><i class="fas fa-piggy-bank text-success"></i> Vault</a>
                     </div>
                 </li>
-                
+            </ul>
+            
+            <ul class="navbar-nav ml-auto">
                 <li class="nav-item dropdown">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         <i class="fas fa-cubes text-success"></i> Social <span class="caret"></span>
@@ -83,10 +85,6 @@
                         <a class="dropdown-item text-white" href="https://twitter.com/ArcadiumETC" target="_blank"><i class="fas fa-bolt text-success"></i> Twitter</a>
                     </div>
                 </li>
-            </ul>
-            
-            <ul class="navbar-nav ml-auto">
-                
             </ul>
         </div>
     </nav>
@@ -212,11 +210,10 @@
                 
                 <div class="card border-white rcAll animated fadeInRight delay-1s">
                     <div class="card-header rcTop bg-primary text-white">Stats</div>
-                    <div class="card-body rcBottom bg-primary text-white text-center">
+                    <div class="card-body rcBottom bg-primary text-white text-left">
                         <ul>
-                            <li><i class="fas fa-coins"></i> <span id="totalDividends"></span> Dividends Paid to Holders</li>
-                            <li><i class="fab fa-ethereum"></i> <span id="etcInContract">0</span> in the Vault</li>
-                            <li><span id="sizeUSD">   </span> USD locked up in DeFi</li>
+                            <li><i class="fas fa-coins"></i> <span id="totalDividends"></span> Dividends Paid</li>
+                            <li><i class="fab fa-ethereum"></i> <span id="etcInContract">0</span> in the Vault, valued at <span id="sizeUSD"></span> USD</li>
                         </ul>
                     </div>
                 </div>
@@ -234,7 +231,7 @@
             </div>
         </div>
         
-        <footer class="container jumbotron bg-primary py-5 animated fadeInUp delay-3s">
+        <footer class="container jumbotron bg-primary py-5">
         <div class="row">
             <div class="col-12 col-md">
                 <small class="d-block mb-3 text-muted">Thank you for stopping by! If you find this site useful, I could always do with another coffee (or some more ETC)! Have a great day!</small>
