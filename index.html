@@ -52,6 +52,10 @@
             gtag('js', new Date());
             gtag('config', 'UA-156455321-1');
         </script>
+        
+        <script>
+            var clipboard = new Clipboard(".donateLink");
+        </script>
     </head>
 
     <body class="bg-primary text-white wallpaper1">
@@ -143,7 +147,7 @@
             <footer class="container jumbotron bg-primary py-5">
         <div class="row">
             <div class="col-12 col-md">
-                <small class="d-block mb-3 text-muted">Thank you for stopping by! If you find this site useful, I could always do with another coffee (or some more ETC)! Have a great day!</small>
+                <small class="d-block mb-3 text-muted">This website was built with &lt;3, by the Core Dev Team of Arcadium Network, for the world. Any donations are greatly appreciated!</small>
                 <a class="btn btn-sm btn-block btn-success" href="#" data-toggle="modal" data-target="#donateModal">Donate to Arcadium</a>
                 <br />
             </div>
@@ -216,25 +220,40 @@
                     <div class="container">
                         <div class="row">
                             <div class="col text-center">
-                                <b>Send me some Points</b>
-                                <img src="https://chart.googleapis.com/chart?chs=150x150&amp;cht=qr&amp;chl=0x8C3384569C5174E8Fe196b007fBbf4557475c6F5&amp;choe=UTF-8" alt="Flux Donations Address">
-                                <br />
-                                <small>Donating Points to Arcadium helps to motivate further development!</small><br />
+                                <img src="assets/img/avatars/deano.png" alt="Deano" width="50px" height="50px"><br />
+                                <b>Deano</b><br />
+                                <input type="hidden" id="deanoETC" value="DeanoETCAddressGoesHere" />
                             </div>
                             
                             <div class="col text-center">
-                                <b>Send Divies some ETC</b>
-                                <img src="https://chart.googleapis.com/chart?chs=150x150&amp;cht=qr&amp;chl=0xd1A231ae68eBE7Aec3ECDAEAC4C0776eB525D969&amp;choe=UTF-8" alt="Flux Donations Address">
-                                <br />
-                                <small>Donating ETC to Divies helps the entire Commonwealth! Thank You!</small><br />
+                                <img src="assets/img/avatars/rinon.png" alt="Rinon" width="50px" height="50px"><br />
+                                <b>Rinon</b><br />
+                                <input type="hidden" id="rinonETC" value="RinonETCAddressGoesHere" />
+                            </div>
+                            
+                            <div class="col text-center">
+                                <img src="assets/img/avatars/birdman.png" alt="Birdman" width="50px" height="50px"><br />
+                                <b>Birdman</b><br />
+                                <input type="hidden" id="birdmanETC" value="BirdmanETCAddressGoesHere" />
+                            </div>
+                            
+                            <div class="col text-center">
+                                <img src="assets/img/avatars/skinner.png" alt="SirSkinner" width="50px" height="50px"><br />
+                                <b>SirSkinner</b><br />
+                                <input type="hidden" id="sirskinnerETC" value="SkinnerETCAddressGoesHere" />
                             </div>
                         </div>
                     </div>
                     
                     <div class="text-center">
+                        <br />
+                        <b>Arcadium Network Core Dev Team Wallet: </b>
+                        <code>0x2fA2c7907Cbc1Bd143861566d23Cd83200C9be9b</code><br />
+                        <a class="btn btn-block btn-sm btn-outline-success" href="https://classic.etccoopexplorer.com/address/0x2fa2c7907cbc1bd143861566d23cd83200c9be9b/transactions" target="_blank">View on Blockscout</a><br />
                         
+                        <br />
+                        <p>Thank you very much for considering a donation to Arcadium Network! Before you continue, please be aware that anything sent to our addresses cannot be refunded - so please, only send what you can absolutely afford, and ensure you double-check details prior to making transactions.</p>
                     </div>
-                    <p>Thank you very much for considering a donation to Arcadium! Before you continue, please be aware that anything sent to Arcadium addresses cannot be refunded - so please, only send what you can absolutely afford. Donations received by Arcadium will be used to fund future development efforts and new projects. Donations of ETC to Divies will help the entire Commonwealth.</p>
                 </div>
 
                 <div class="modal-footer bg-primary text-white">
