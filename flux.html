@@ -63,17 +63,6 @@
                 
                 <li class="nav-item dropdown">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                        <i class="fas fa-bullhorn text-success"></i> Broadcasts <span class="caret"></span>
-                    </a>
-
-                    <div class="dropdown-menu dropdown-menu-right border-success bg-primary text-white" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item text-white" href="#" data-toggle="modal" data-target="#sponsorPurchaseModal">Buy Broadcast</a>
-                        <a class="dropdown-item text-white" href="#" data-toggle="modal" data-target="#sponsorDetailsModal" target="_blank">Broadcast Details</a>
-                    </div>
-                </li>
-                
-                <li class="nav-item dropdown">
-                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         <i class="fas fa-cubes text-success"></i> Dapps <span class="caret"></span>
                     </a>
 
@@ -97,14 +86,7 @@
             </ul>
             
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#" id="rainMaker">
-                        <h4 class="text-success text-center">
-                            <i class="fab fa-ethereum"></i> <span id="etcInContract">0</span><br />
-                            <small class="text-white"><span id="sizeUSD">   </span> USD</small>
-                        </h4>
-                    </a>
-                </li>
+                
             </ul>
         </div>
     </nav>
@@ -216,12 +198,12 @@
                     <div class="card-footer rcBottom bg-primary text-white text-center">
                         <div class="row">
                             <div class="col-md-6">
-                                <a class="btn btn-block btn-success" id="distribute">
+                                <a class="btn btn-block btn-sm btn-success" id="distribute">
                                     <i class="fas fa-info text-success"></i> Split Divies
                                 </a><br />
                             </div>
                             <div class="col-md-6">
-                                <a class="btn btn-block btn-outline-success" id="rainMaker"><i class="fas fa-cloud text-success"></i> Activate RainMaker</a><br />
+                                <a class="btn btn-block btn-sm btn-outline-success" id="rainMaker"><i class="fas fa-cloud text-success"></i> Activate RainMaker</a><br />
                             </div>
                         </div>
                     </div>
@@ -229,10 +211,13 @@
                 <br />
                 
                 <div class="card border-white rcAll animated fadeInRight delay-1s">
-                    <div class="card-header rcTop bg-primary text-white text-center">Stats</div>
+                    <div class="card-header rcTop bg-primary text-white">Stats</div>
                     <div class="card-body rcBottom bg-primary text-white text-center">
-                        <i class="fas fa-coins"></i> <span id="totalDividends"></span><br />
-                        paid in Dividends to Points holders to date
+                        <ul>
+                            <li><i class="fas fa-coins"></i> <span id="totalDividends"></span> Dividends Paid to Holders</li>
+                            <li><i class="fab fa-ethereum"></i> <span id="etcInContract">0</span> in the Vault</li>
+                            <li><span id="sizeUSD">   </span> USD locked up in DeFi</li>
+                        </ul>
                     </div>
                 </div>
                 <br />
@@ -248,28 +233,68 @@
                 <a class="btn btn-block btn-sm btn-warning" href="#" data-toggle="modal" data-target="#buyETCModal">Need more ETC?</a><br />
             </div>
         </div>
+        
+        <footer class="container jumbotron bg-primary py-5 animated fadeInUp delay-3s">
+        <div class="row">
+            <div class="col-12 col-md">
+                <small class="d-block mb-3 text-muted">Thank you for stopping by! If you find this site useful, I could always do with another coffee (or some more ETC)! Have a great day!</small>
+                <a class="btn btn-sm btn-block btn-success" href="#" data-toggle="modal" data-target="#donateModal">Donate to Arcadium</a>
+                <br />
+            </div>
+            <div class="col-6 col-md">
+                <h5 class="text-white">Arcadium</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="flux.html">Flux</a></li>
+                    <li><a class="text-muted" href="vault.html">Vault</a></li>
+                    <li><a class="text-muted" href="https://games.arcadium.network/powerinc">Power Inc.</a></li>
+                    <li><a class="text-muted" href="https://games.arcadium.network/racearena">Race Arena</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5 class="text-white">ETC Friends</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="https://universalcoin.io" target="_blank">UniversalCoin</a></li>
+                    <li><a class="text-muted" href="https://commonwealth.gg" target="_blank">Commonwealth</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5 class="text-white">Developers</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="https://github.com/ArcadiumNetwork" target="_blank">GitHub</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5 class="text-white">About</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="https://twitter.com/ArcadiumETC" target="_blank">Twitter</a></li>
+                    <li><a class="text-muted" href="https://instagram.com/arcadiumnetwork" target="_blank">Instagram</a></li>
+                    <li><a class="text-muted" href="https://discord.gg/7fCvU2h" target="_blank">Discord</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
         <br />
         <br />
         <br />
         <br />
         
-            <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-primary">
-                <a class="navbar-brand" href="#"></a>
-                <div class="navbar-collapse collapse" id="navbarCollapse" style="">
-                    <ul class="navbar-nav mr-auto">
-                        <div id="current"></div>
-                    </ul>
+        <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-primary">
+            <a class="navbar-brand" href="#"></a>
+            <div class="navbar-collapse collapse" id="navbarCollapse" style="">
+                <ul class="navbar-nav mr-auto">
+                    <div id="current"></div>
+                </ul>
           
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" data-toggle="modal" data-target="#sponsorPurchaseModal">Buy this Space</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" data-toggle="modal" data-target="#sponsorDetailsModal">Learn More</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#sponsorPurchaseModal">Buy this Space</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#sponsorDetailsModal">Learn More</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
  
             <div class="modal" id="donateModal">
                 <div class="modal-dialog">

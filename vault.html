@@ -48,7 +48,7 @@
 </head>
 
 <body class="bg-primary text-white wallpaper1">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top animated fadeInDown delay-2s">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
         <a class="navbar-brand" href="index.html"><img src="./assets/img/logo.png" alt="Logo" style="width:40px;"> ARCADIUM</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -57,18 +57,6 @@
         <div class="collapse navbar-collapse" id="navbarColor02">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item"><a class="nav-link" href="flux.html"><i class="fas fa-coins text-success"></i> Flux</a></li>
-                
-                <li class="nav-item dropdown">
-                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                        <i class="fas fa-bullhorn text-success"></i> Broadcasts <span class="caret"></span>
-                    </a>
-
-                    <div class="dropdown-menu dropdown-menu-right border-success bg-primary text-white" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item text-white" href="#" data-toggle="modal" data-target="#sponsorPurchaseModal">Buy Broadcast</a>
-                        <a class="dropdown-item text-white" href="#" data-toggle="modal" data-target="#sponsorInstructorModal">Broadcast Help</a>
-                        <a class="dropdown-item text-white" href="#" data-toggle="modal" data-target="#sponsorDetailsModal" target="_blank">Current Broadcast</a>
-                    </div>
-                </li>
                 
                 <li class="nav-item dropdown">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -95,14 +83,7 @@
             </ul>
             
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#" id="rainMaker">
-                        <h4 class="text-success text-center">
-                            <i class="fab fa-ethereum"></i> <span id="etcInContract">0</span><br />
-                            <small class="text-white"><span id="sizeUSD">   </span> USD</small>
-                        </h4>
-                    </a>
-                </li>
+                
             </ul>
         </div>
     </nav>
@@ -114,7 +95,7 @@
     <br />
 
     <div id="dapp" class="container">
-        <div class="row jumbotron bg-primary text-white animated fadeInDown delay-2s">
+        <div class="row jumbotron bg-primary text-white animated fadeInDown delay-1s">
             <div class="container">
                 <h1 class="display-3 text-white">Vault</h1>
                 <p class="text-white"><i>Time-Locked Wallets on Ethereum Classic</i></p>
@@ -136,7 +117,7 @@
         
         <div class="row">
             <div class="col-md-6">
-                <div class="card border-success animated fadeInLeft delay-2s">
+                <div class="card border-success animated fadeInLeft delay-1s">
                     <div class="card-header bg-primary text-white">What is Vault?</div>
                     <div class="card-body bg-primary text-white">
                         <p class="text-center">Vault is an implementation of "Time-Locked Wallets", originally by <i class="text-success" target="_blank">Radek Ostrofski</i> - modified just to hold ETC.</p>
@@ -148,7 +129,7 @@
             </div>
             
             <div class="col-md-6">
-                <div class="card border-success animated fadeInRight delay-2s">
+                <div class="card border-success animated fadeInRight delay-1s">
                     <div class="card-header bg-primary text-white">Features</div>
                     <div class="card-body bg-primary text-white">
                         <ul>
@@ -182,8 +163,8 @@
                 <ul class="list-unstyled text-small">
                     <li><a class="text-muted" href="flux.html">Flux</a></li>
                     <li><a class="text-muted" href="vault.html">Vault</a></li>
-                    <li><a class="text-muted" href="powerinc.html">Power Inc.</a></li>
-                    <li><a class="text-muted" href="racearena.html">Race Arena</a></li>
+                    <li><a class="text-muted" href="https://games.arcadium.network/powerinc">Power Inc.</a></li>
+                    <li><a class="text-muted" href="https://games.arcadium.network/racearena">Race Arena</a></li>
                 </ul>
             </div>
             <div class="col-6 col-md">
@@ -191,7 +172,6 @@
                 <ul class="list-unstyled text-small">
                     <li><a class="text-muted" href="https://universalcoin.io" target="_blank">UniversalCoin</a></li>
                     <li><a class="text-muted" href="https://commonwealth.gg" target="_blank">Commonwealth</a></li>
-                    <li><a class="text-muted" href="https://onex.network" target="_blank">ONEX Network</a></li>
                 </ul>
             </div>
             <div class="col-6 col-md">
@@ -210,6 +190,29 @@
             </div>
         </div>
     </footer>
+        <br />
+        <br />
+        <br />
+        <br />
+        
+        <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-primary">
+            <a class="navbar-brand" href="#"></a>
+            <div class="navbar-collapse collapse" id="navbarCollapse" style="">
+                <ul class="navbar-nav mr-auto">
+                    <div id="current"></div>
+                </ul>
+          
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#sponsorPurchaseModal">Buy this Space</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#sponsorDetailsModal">Learn More</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
     </div>
     
     <div class="modal" id="newWalletModal">

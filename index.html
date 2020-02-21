@@ -67,18 +67,6 @@
                 
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            <i class="fas fa-bullhorn text-success"></i> Broadcasts <span class="caret"></span>
-                        </a>
-
-                        <div class="dropdown-menu dropdown-menu-right border-success bg-primary text-white" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item text-white" href="#" data-toggle="modal" data-target="#sponsorPurchaseModal">Buy Broadcast</a>
-                            <a class="dropdown-item text-white" href="#" data-toggle="modal" data-target="#sponsorInstructorModal">Broadcast Help</a>
-                            <a class="dropdown-item text-white" href="#" data-toggle="modal" data-target="#sponsorDetailsModal" target="_blank">Current Broadcast</a>
-                        </div>
-                    </li>
-                
-                    <li class="nav-item dropdown">
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             <i class="fas fa-cubes text-success"></i> Dapps <span class="caret"></span>
                         </a>
 
@@ -138,7 +126,7 @@
                                 <div class="col">
                                     <img src="assets/img/etc-logo-transparent.png" width="80px" height="130px" /><br />
                                     <br />
-                                    <h3 class="text-white"><i class="fab fa-ethereum"></i> <span id="etcInContract">0</span> in the Vault</h3>
+                                    <h3 class="text-white"><span id="etcInContract">0</span> in the Vault</h3>
                                     <p class="text-success"><span id="sizeUSD">   </span> USD locked up in DeFi</p>
                                 </div>
                             </div>
@@ -165,31 +153,25 @@
                 </div>
             </div>
             <br />
-            
-            <div class="row">
-                <div class="col">
-                    <div class="card border-success animated fadeIn delay-1s">
-                        <div class="card-header bg-primary text-center text-white">
-                            <div id="current"></div>
-                        </div>
-                    </div>
-                    <br />
-                </div>
-            </div>
-            <br />
-    <br />
+
+
     
     <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-primary">
-        <a class="navbar-brand" href="#"></a>
-        <div class="navbar-collapse collapse" id="navbarCollapse" style="">
-            <ul class="navbar-nav mr-auto">
+            <a class="navbar-brand" href="#"></a>
+            <div class="navbar-collapse collapse" id="navbarCollapse" style="">
+                <ul class="navbar-nav mr-auto">
+                    <div id="current"></div>
+                </ul>
           
-            </ul>
-          
-            <ul class="navbar-nav ml-auto">
-            
-            </ul>
-        </div>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#sponsorPurchaseModal">Buy this Space</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#sponsorDetailsModal">Learn More</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </div>
     
