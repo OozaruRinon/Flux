@@ -21,7 +21,7 @@ window.addEventListener('load', async () => {
     }
 });
 
-let mnAddress = '0xae286722Fd0500Dd446f23752958bA5720bD323a';
+let mnAddress = '0x67294f5F1d44c0de10e49f98553Dbd77dC7D73fD';
 let el = function(id){ return document.querySelector(id);};
 let sacrific3CAddress;
 let sacrific3CContract;
