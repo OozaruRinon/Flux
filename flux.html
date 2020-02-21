@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="assets/css/farmer.css" />
     <link rel="stylesheet" href="assets/css/animate.css" />
     <link rel="stylesheet" href="assets/css/scrollFix.css" />
+    <link rel="stylesheet" href="assets/css/roundedCorners.css" />
     <link rel="stylesheet" href="assets/css/professional_style.css" />
     <link rel="stylesheet" href="assets/css/bootstrap.carousel.css" />
     <link rel="stylesheet" href="assets/css/themes/default.min.css" />
@@ -50,7 +51,7 @@
 </head>
 
 <body class="bg-primary text-white wallpaper1">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top animated fadeInDown delay-2s">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
         <a class="navbar-brand" href="index.html"><img src="./assets/img/logo.png" alt="Logo" style="width:40px;"> ARCADIUM</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -67,8 +68,7 @@
 
                     <div class="dropdown-menu dropdown-menu-right border-success bg-primary text-white" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item text-white" href="#" data-toggle="modal" data-target="#sponsorPurchaseModal">Buy Broadcast</a>
-                        <a class="dropdown-item text-white" href="#" data-toggle="modal" data-target="#sponsorInstructorModal">Broadcast Help</a>
-                        <a class="dropdown-item text-white" href="#" data-toggle="modal" data-target="#sponsorDetailsModal" target="_blank">Current Broadcast</a>
+                        <a class="dropdown-item text-white" href="#" data-toggle="modal" data-target="#sponsorDetailsModal" target="_blank">Broadcast Details</a>
                     </div>
                 </li>
                 
@@ -117,82 +117,63 @@
     <br />
     
     <div class="container">
-        <!-- Ad -->
         <div class="row">
-            <div class="col">
-                <div class="card border-white animated fadeIn delay-1s">
-                    <div class="card-header bg-primary text-white">
-                        <div id="current"></div>
+            <div class="col-md-6">
+                <div class="card border-success rcAll animated fadeInLeft delay-1s">
+                    <div class="card-header rcTop bg-primary text-white">Overview</div>
+                    
+                    <div class="card-body bg-primary text-white">
+                        <div class="row">
+                            <div class="col text-center">
+                                <h3 class="text-white"><i class="fas fa-coins"></i> <span id="myCropTokens"></span></h3>
+                                <small>My Points</small>
+                            </div>
+                            
+                            <div class="col text-center">
+                                <h3 class="text-white"><i class="fab fa-ethereum"></i> <span id="myETCValue"></span></h3>
+                                <small>ETC Value</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-footer rcBottom bg-primary text-white">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <a class="btn btn-block btn-sm btn-success" href="#" data-toggle="modal" data-target="#buyTokensModal">Deposit</a><br />
+                            </div>
+                            <div class="col-md-4">
+                                <a class="btn btn-block btn-sm btn-danger" href="#" data-toggle="modal" data-target="#sellTokensModal">Withdraw</a><br />
+                            </div>
+                            <div class="col-md-4">
+                                <a class="btn btn-block btn-sm btn-info" href="#" data-toggle="modal" data-target="#transferTokensModal">Transfer</a><br />
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <br />
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-6">
-                <div class="jumbotron headerbg text-white text-center animated fadeInLeft delay-1s">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col text-right">
-                                <h1 class="text-white text-center"><i class="fas fa-coins"></i> <span id="myCropTokens"></span> Points</h1>
-                            </div>
-                        </div>
-                
-                        <div class="row">
-                            <div class="col text-left">
-                                <h3 class="text-white text-center"><i class="fab fa-ethereum"></i> <span id="myETCValue"></span> ETC</h3><br />
-                            </div>
-                        </div>
-                
-                        <div class="row">
-                            <div class="col">
-                                <a class="btn btn-block btn-success" href="#" data-toggle="modal" data-target="#buyTokensModal">Deposit</a>
-                                <br />
-                            </div>
-                            
-                            <div class="col">
-                                <a class="btn btn-block btn-danger" href="#" data-toggle="modal" data-target="#sellTokensModal">Withdraw</a><br />
-                            </div>
-                            
-                            <div class="col">
-                                <a class="btn btn-block btn-info" href="#" data-toggle="modal" data-target="#transferTokensModal">Transfer</a><br />
-                            </div>
-                        </div>
-                        
-                        <div class="row">
-                            <div class="col">
-                                <a class="btn btn-block btn-warning" href="#" data-toggle="modal" data-target="#buyETCModal">Need more ETC?</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
             
             <div class="col-md-6">
-                <div class="card border-info animated fadeInRight delay-1s">
-                    <div class="card-header bg-primary text-white text-center">My Dividends</div>
+                <div class="card border-success rcAll animated fadeInRight delay-1s">
+                    <div class="card-header rcTop bg-primary text-white">My Dividends</div>
                     <div class="card-body bg-primary text-white text-center">
-                        <i class="fab fa-ethereum"></i> <span id="myCropDividends"></span> ETC
-                    </div>
-                    <div class="card-footer bg-primary text-white text-center">
                         <div class="row">
-                            <div class="col"><a class="btn btn-block btn-success" id="reinvest"><i class="fas fa-recycle text-white"></i> Compound</a></div>
-                            <div class="col"><a class="btn btn-block btn-info" id="withdraw"><i class="fas fa-wallet text-white"></i> Withdraw</a></div>
+                            <div class="col text-center">
+                                <h3 class="text-white"><i class="fab fa-ethereum"></i> <span id="myCropDividends"></span></h3>
+                                <small>Current Earnings</small>
+                            </div>
                         </div>
-                        
-                        
                     </div>
-                </div>
-                <br />
-                
-                <div class="card border-info animated fadeInRight delay-1s">
-                    <div class="card-header bg-primary text-white text-center">Commonwealth Dividends</div>
-                    <div class="card-body bg-primary text-white text-center">
-                        <i class="fas fa-coins"></i> <span id="totalDividends"></span>
-                    </div>
-                    <div class="card-footer bg-primary text-white text-center">
-                        
+                    <div class="card-footer rcBottom bg-primary text-white text-center">
+                        <div class="row">
+                            <div class="col">
+                                <a class="btn btn-block btn-sm btn-success" id="reinvest"><i class="fas fa-recycle text-white"></i> Compound</a><br />
+                            </div>
+                            
+                            <div class="col">
+                                <a class="btn btn-block btn-sm btn-info" id="withdraw"><i class="fas fa-wallet text-white"></i> Withdraw</a><br />
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <br />
@@ -201,39 +182,57 @@
         
         <div class="row">
             <div class="col-md-6">
-                <div class="card border-danger animated fadeInRight delay-2s">
-                    <div class="card-header bg-primary text-white">Price</div>
+                <div class="card border-white rcAll animated fadeInLeft delay-1s">
+                    <div class="card-header rcTop bg-primary text-white">Price</div>
                     <div class="card-body bg-primary text-white">
                         <svg id="container"></svg><br />
                         <a href="https://www.xenobank.com/" class="text-success text-center" target="_blank" style="font-size:10px;">(More  Data at Xenobank.com)</a>
                     </div>
+                    <div class="card-footer rcBottom bg-primary text-white">
                     
-                    <div class="card-footer bg-primary text-white">
-                        
-                    </div>  
+                    </div>
                 </div>
                 <br />
             </div>
             
             <div class="col-md-6">
-                <div class="card border-info animated fadeInRight delay-3s">
-                    <div class="card-header bg-primary text-white text-center">Divies</div>
+                <div class="card border-white rcAll animated fadeInRight delay-1s">
+                    <div class="card-header rcTop bg-primary text-white">Advanced</div>
                     <div class="card-body bg-primary text-white text-center">
-                        <i class="fab fa-ethereum"></i> <span id="diviesBalance"></span> ETC
+                        <div class="row">
+                            <div class="col text-center">
+                                <h3 class="text-white"><i class="fab fa-ethereum"></i> <span id="diviesBalance"></span></h3>
+                                <small>Divies Balance</small>
+                            </div>
+                            
+                            <div class="col text-center">
+                                <h3 class="text-white"><i class="fab fa-ethereum"></i> <span id="rainMakerDividends"></span></h3>
+                                <small>RainMaker Balance</small>
+                                <br />
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-footer bg-primary text-white text-center">
-                        <a class="btn btn-block btn-outline-success" id="distribute"><i class="fas fa-info text-success"></i> Split Divies</a>
+                        
+                    <div class="card-footer rcBottom bg-primary text-white text-center">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a class="btn btn-block btn-success" id="distribute">
+                                    <i class="fas fa-info text-success"></i> Split Divies
+                                </a><br />
+                            </div>
+                            <div class="col-md-6">
+                                <a class="btn btn-block btn-outline-success" id="rainMaker"><i class="fas fa-cloud text-success"></i> Activate RainMaker</a><br />
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <br />
                 
-                <div class="card border-info animated fadeInRight delay-3s">
-                    <div class="card-header bg-primary text-white text-center">RainMaker</div>
-                    <div class="card-body bg-primary text-white text-center">
-                        <i class="fas fa-coins"></i> <span id="rainMakerTokens"></span> Points<br />(<i class="fab fa-ethereum"></i> <span id="rainMakerDividends"></span> ETC)
-                    </div>
-                    <div class="card-footer bg-primary text-white text-center">
-                        <a class="btn btn-block btn-outline-success" id="rainMaker"><i class="fas fa-cloud text-success"></i> Activate</a>
+                <div class="card border-white rcAll animated fadeInRight delay-1s">
+                    <div class="card-header rcTop bg-primary text-white text-center">Stats</div>
+                    <div class="card-body rcBottom bg-primary text-white text-center">
+                        <i class="fas fa-coins"></i> <span id="totalDividends"></span><br />
+                        paid in Dividends to Points holders to date
                     </div>
                 </div>
                 <br />
@@ -242,350 +241,312 @@
         
         <div class="row">
             <div class="col">
-                <a class="btn btn-block btn-success" href="#" data-toggle="modal" data-target="#informationModal">Learn More</a><br />
+                <a class="btn btn-block btn-sm btn-success" href="#" data-toggle="modal" data-target="#informationModal">Learn More</a><br />
             </div>
-        </div>
-    
-    <footer class="container jumbotron bg-primary py-5">
-        <div class="row">
-            <div class="col-12 col-md">
-                <small class="d-block mb-3 text-muted">Thank you for stopping by! If you find this site useful, I could always do with another coffee (or some more ETC)! Have a great day!</small>
-                <a class="btn btn-sm btn-success" href="#" data-toggle="modal" data-target="#donateModal">Donate to Arcadium</a>
-            </div>
-            <div class="col-6 col-md">
-                <h5 class="text-white">Arcadium</h5>
-                <ul class="list-unstyled text-small">
-                    <li><a class="text-muted" href="flux.html">Flux</a></li>
-                    <li><a class="text-muted" href="vault.html">Vault</a></li>
-                    <li><a class="text-muted" href="powerinc.html">Power Inc.</a></li>
-                    <li><a class="text-muted" href="racearena.html">Race Arena</a></li>
-                </ul>
-            </div>
-            <div class="col-6 col-md">
-                <h5 class="text-white">ETC Friends</h5>
-                <ul class="list-unstyled text-small">
-                    <li><a class="text-muted" href="https://universalcoin.io" target="_blank">UniversalCoin</a></li>
-                    <li><a class="text-muted" href="https://commonwealth.gg" target="_blank">Commonwealth</a></li>
-                    <li><a class="text-muted" href="https://onex.network" target="_blank">ONEX Network</a></li>
-                </ul>
-            </div>
-            <div class="col-6 col-md">
-                <h5 class="text-white">Developers</h5>
-                <ul class="list-unstyled text-small">
-                    <li><a class="text-muted" href="https://github.com/ArcadiumNetwork" target="_blank">GitHub</a></li>
-                </ul>
-            </div>
-            <div class="col-6 col-md">
-                <h5 class="text-white">About</h5>
-                <ul class="list-unstyled text-small">
-                    <li><a class="text-muted" href="https://twitter.com/ArcadiumETC" target="_blank">Twitter</a></li>
-                    <li><a class="text-muted" href="https://instagram.com/arcadiumnetwork" target="_blank">Instagram</a></li>
-                    <li><a class="text-muted" href="https://discord.gg/7fCvU2h" target="_blank">Discord</a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
-    <br />
-    <br />
- 
-    <div class="modal" id="donateModal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header bg-primary text-white">
-                    <h4 class="modal-title text-white"><i class="fas fa-long-arrow-alt-right"></i>  Donate to Arcadium</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-
-                <div class="modal-body bg-primary text-white">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col text-center">
-                                <b>Send me some Points</b>
-                                <img src="https://chart.googleapis.com/chart?chs=150x150&amp;cht=qr&amp;chl=0x8C3384569C5174E8Fe196b007fBbf4557475c6F5&amp;choe=UTF-8" alt="Flux Donations Address">
-                                <br />
-                                <small>Donating Points to Arcadium helps to motivate further development!</small><br />
-                            </div>
-                            
-                            <div class="col text-center">
-                                <b>Send Divies some ETC</b>
-                                <img src="https://chart.googleapis.com/chart?chs=150x150&amp;cht=qr&amp;chl=0xd1A231ae68eBE7Aec3ECDAEAC4C0776eB525D969&amp;choe=UTF-8" alt="Flux Donations Address">
-                                <br />
-                                <small>Donating ETC to Divies helps the entire Commonwealth! Thank You!</small><br />
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="text-center">
-                        
-                    </div>
-                    <p>Thank you very much for considering a donation to Arcadium! Before you continue, please be aware that anything sent to Arcadium addresses cannot be refunded - so please, only send what you can absolutely afford. Donations received by Arcadium will be used to fund future development efforts and new projects. Donations of ETC to Divies will help the entire Commonwealth.</p>
-                </div>
-
-                <div class="modal-footer bg-primary text-white">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-        
-        <div class="modal" id="informationModal">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header bg-primary text-white">
-                        <h4 class="modal-title text-white"><i class="fas fa-dollar-sign"></i>  What is This?</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-
-                    <div class="modal-body bg-primary text-white" id="buyArea">
-                        <h3 class="text-white">Compound Dividends</h3>
-                        <p>When others Buy and Sell their points, you will earn Dividends proportionate to how many points you hold. These Dividends are awarded in ETC, so you have a couple of options. If you choose to compound your Dividends, the ETC you have earned from others will be used to buy more Points, thus meaning you could earn more at a faster rate.</p>
-                        <br />
-                        
-                        <h3 class="text-white">Withdraw Dividends</h3>
-                        <p>If you build up a nice amount of Dividends, you may choose not to buy more Points, but instead withdraw the ETC to your wallet. Should this be what you desire, tapping &quot;Withdraw Dividends&quot; is your answer.</p>
-                        <br />
-                        
-                        <h3 class="text-white">Activate Divies</h3>
-                        <p>Divies is a Smart Contract connected to Commonwealth, which receives ETC and distributes it to holders of Points. One can contribute to Divies either by sending ETC directly to it's <a href="https://blockscout.com/etc/mainnet/address/0xd1a231ae68ebe7aec3ecdaeac4c0776eb525d969/transactions" target="_blank" class="text-success">Contract Address</a>, or by using a Dapp or service like the <a href="https://commonwealth.gg/sponsor.html" target="_blank" class="text-success">Broadcaster</a>.</p>
-                        <br />
-                        
-                        <h3 class="text-white">Activate RainMaker</h3>
-                        <p>RainMaker is a special Smart Contract: It provides a guaranteed Price Floor for the Commonwealth Vault - RainMaker can only buy and receive more Points - it can never sell, spend or send them anywhere at all. <a href="https://medium.com/@masterhax/what-is-the-rainmaker-contract-bb0a77bc3b91" target="_blank" class="text-success">Learn More Here via the Medium Post about Rainmaker</a>.</p>
-                    </div>
-
-                    <div class="modal-footer bg-primary text-white">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-    <!-- Modals -->
-    <div class="modal" id="buyTokensModal">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header bg-primary text-white">
-                        <h4 class="modal-title text-white"><i class="fas fa-dollar-sign"></i>  Buy Points</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-
-                    <div class="modal-body bg-primary text-white" id="buyArea">
-                        <h3 class="text-white"><strong>Price: </strong><span id="tokenBuyGet">0.0000</span></h3>
-                        <small>Right now, 1 Point costs <b><span id="priceUSD"></span> USD</b>.</small>
-                        <input placeholder="ETC to Spend..." class="form-control" type="text" id="buyInput"><br />
-                        <button id="buy" class="btn btn-block btn-success">Buy Points</button>
-                        <div id="buyAmount" class="ui fluid large basic green button approx no click buy-amount">
-                            <i>How much will you buy?</i>
-                        </div>
-                    </div>
-
-                    <div class="modal-footer bg-primary text-white">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="modal" id="sellTokensModal">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header bg-primary text-white">
-                        <h4 class="modal-title text-white"><i class="fas fa-dollar-sign"></i>  Sell Points</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-
-                    <div class="modal-body bg-primary text-white">
-                        <h3 class="text-white"><strong>Price: </strong><span class="buy-price" id="tokenSellGet">0.00</span></h3>
-                        <input placeholder="Points to Sell..." class="form-control" type="text" id="sellInput"><br />
-                        <button id="sell" class="btn btn-block btn-danger">Sell Points</button>
-                        <div id="sellAmount" class="ui fluid large basic blue button no click approx" style="margin-top:10px;">
-                            <i>How much will you sell?</i>
-                        </div>
-                    </div>
-
-                    <div class="modal-footer bg-primary text-white">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="modal" id="transferTokensModal">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header bg-primary text-white">
-                        <h4 class="modal-title text-white"><i class="fas fa-long-arrow-alt-right"></i>  Transfer Points</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-
-                    <div class="modal-body bg-primary text-white">
-                        <input type="text" id="transferAddress" class="form-control" placeholder="Destination Address"><br />
-                        <input type="text" id="transferTokenCount" class="form-control" placeholder="Amount of Points"><br />
-                        <button id="transfer" class="btn btn-block btn-info"><i class="right arrow icon"></i> Transfer</button>
-                    </div>
-
-                    <div class="modal-footer bg-primary text-white">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-    <!-- Sponsor Modals -->
-    <div class="modal" id="sponsorPurchaseModal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header bg-primary text-white">
-                    <h4 class="modal-title text-white"><i class="fas fa-long-arrow-alt-right"></i>  Buy Adspace</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-
-                <div class="modal-body bg-primary text-white">
-                    <form class="ui form">
-                        <div class="form-group">
-                            <label>Img URL (30x30) - Optional:</label>
-                            <input type="text" id="imgLink" class="form-control" placeholder="https://i.imgur.com/7iEyv4Q.png">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label>Text</label>
-                            <input type="text" id="text" class="form-control" placeholder="New ICO incoming!">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label>Link Text</label>
-                            <input type="text" id="hyperlinkText" class="form-control" placeholder="Click Here.">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label>Link (include http/https):</label>
-                            <input type="text" id="hyperlink" class="form-control" placeholder="https://company.com">
-                        </div>
-                    </form>
-                    
-                    <div class="row sponsor">
-                        <p>Preview: </p>
-                        <div id="sampleAd" class="current"></div>
-                    </div>
-                    <button id="sample"   class="btn btn-block btn-info">Generate Preview</button>
-                    <button id="purchase" class="btn btn-block btn-success">Purchase for <div id="price">price</div></button>
-                </div>
-
-                <div class="modal-footer bg-primary text-white">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-        </div>
-
-        <div class="modal" id="sponsorInstructorModal">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header bg-primary text-white">
-                        <h4 class="modal-title text-white"><i class="fas fa-long-arrow-alt-right"></i>  How to Use</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-
-                    <div class="modal-body bg-primary text-white">
-                        <p>
-                            Store your ad on-chain and show it across the Commonwealth network!<br />
-                            There are 2 simple steps to broadcasting on the Commonwealth network.
-                        </p>
-                        <ul>
-                            <li>1. Make sure you have an <a target="_blank" href="https://forum.saturn.network/t/how-to-install-saturn-wallet-create-a-new-account/1302">ETC wallet</a> with ETC in it.</li>
-                            <li>2. Fill out the fields below "Buy It!" and click "Purchase" when ready.</li>
-                        </ul>
-                        <h3 class="text-white">Rules: </h3>
-                        <ul>
-                            <li>Length of Text AND Link Text less than 140 characters. Img link 30 x 30.</li>
-                            <li>Your image link should link to the actual image, make sure URL ends with .jpeg , .jpg , .gif , .svg, or .png</li>
-                            <li>Broadcast is stored permanently on the blockchain and can be read by any Ethereum Classic node! Also hosted on our <a target="_blank" href="https://api.commonwealth.gg/sponsor/">server</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="modal-footer bg-primary text-white">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-        <div class="modal" id="sponsorDetailsModal">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header bg-primary text-white">
-                        <h4 class="modal-title text-white"><i class="fas fa-long-arrow-alt-right"></i>  Sponsor Details</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-
-                    <div class="modal-body bg-primary text-white">
-                        <div id="currentImg" class="sponsorPrice">1234/token</div>
-                        <h3 class="text-white"><span id="currentText" class="sponsorPrice">1234/token</span></h3>
-                    <p><span id="currentLinkText" class="sponsorPrice">1234/token</span></p>
-                    <span id="currentLink" class="btn btn-block btn-primary">1234/token</span>
-                    <hr />
-                    <p>
-                        <b>Owner <span id="owner"></span></b>
-                        <i><span id="time" class="sponsorPrice"></span><span id="purchasePrice" class="sponsorPrice"></span></i>
-                    </p>
-                </div>
-
-                <div class="modal-footer bg-primary text-white">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-        </div>
-        
-        <div class="modal" id="buyETCModal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header bg-primary text-white">
-                    <h4 class="modal-title text-white"><i class="fas fa-long-arrow-alt-right"></i>  Buy ETC</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-
-                <div class="modal-body bg-primary text-white">
-                    <div class="container">
-                        <div class="row">
-                            <ul>
-                                <li><a href="https://binance.com" target="_blank" class="text-success">Binance.com - Global</a></li>
-                                
-                                <li><a href="https://changelly.com" target="_blank" class="text-success">Changelly.com - Global</a></li>
-                                
-                                <li><a href="https://moonpay.io" target="_blank" class="text-success">Moonpay.io - Global</a></li>
-                                
-                                <li><a href="https://bestchange.com" target="_blank" class="text-success">Bestchange.com - RU, Asia</a></li>
-                                
-                                <li><a href="https://coinbase.com" target="_blank" class="text-success">Coinbase.com - USA, EU, AU</a></li>
-                                
-                                <li><a href="https://coinspot.com.au" target="_blank" class="text-success">Coinspot.com.au - AU</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="modal-footer bg-primary text-white">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-        <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-primary">
-            <a class="navbar-brand" href="#"></a>
-            <div class="navbar-collapse collapse" id="navbarCollapse" style="">
-                <ul class="navbar-nav mr-auto">
-          
-                </ul>
-          
-                <ul class="navbar-nav ml-auto">
             
-                </ul>
+            <div class="col">
+                <a class="btn btn-block btn-sm btn-warning" href="#" data-toggle="modal" data-target="#buyETCModal">Need more ETC?</a><br />
             </div>
-        </nav>
-    </div>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        
+            <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-primary">
+                <a class="navbar-brand" href="#"></a>
+                <div class="navbar-collapse collapse" id="navbarCollapse" style="">
+                    <ul class="navbar-nav mr-auto">
+                        <div id="current"></div>
+                    </ul>
+          
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-toggle="modal" data-target="#sponsorPurchaseModal">Buy this Space</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-toggle="modal" data-target="#sponsorDetailsModal">Learn More</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+ 
+            <div class="modal" id="donateModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header bg-primary text-white">
+                            <h4 class="modal-title text-white"><i class="fas fa-long-arrow-alt-right"></i>  Donate to Arcadium</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
 
+                        <div class="modal-body bg-primary text-white">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <b>Send me some Points</b>
+                                        <img src="https://chart.googleapis.com/chart?chs=150x150&amp;cht=qr&amp;chl=0x8C3384569C5174E8Fe196b007fBbf4557475c6F5&amp;choe=UTF-8" alt="Flux Donations Address">
+                                        <br />
+                                        <small>Donating Points to Arcadium helps to motivate further development!</small><br />
+                                    </div>
+                            
+                                    <div class="col text-center">
+                                        <b>Send Divies some ETC</b>
+                                        <img src="https://chart.googleapis.com/chart?chs=150x150&amp;cht=qr&amp;chl=0xd1A231ae68eBE7Aec3ECDAEAC4C0776eB525D969&amp;choe=UTF-8" alt="Flux Donations Address">
+                                        <br />
+                                        <small>Donating ETC to Divies helps the entire Commonwealth! Thank You!</small><br />
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <div class="text-center">
+                                <p>Thank you very much for considering a donation to Arcadium! Before you continue, please be aware that anything sent to Arcadium addresses cannot be refunded - so please, only send what you can absolutely afford. Donations received by Arcadium will be used to fund future development efforts and new projects. Donations of ETC to Divies will help the entire Commonwealth.</p>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer bg-primary text-white">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="modal" id="informationModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header bg-primary text-white">
+                            <h4 class="modal-title text-white"><i class="fas fa-dollar-sign"></i>  What is This?</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <div class="modal-body bg-primary text-white" id="buyArea">
+                            <h3 class="text-white">Compound Dividends</h3>
+                            <p>When others Buy and Sell their points, you will earn Dividends proportionate to how many points you hold. These Dividends are awarded in ETC, so you have a couple of options. If you choose to compound your Dividends, the ETC you have earned from others will be used to buy more Points, thus meaning you could earn more at a faster rate.</p>
+                            <br />
+                        
+                            <h3 class="text-white">Withdraw Dividends</h3>
+                            <p>If you build up a nice amount of Dividends, you may choose not to buy more Points, but instead withdraw the ETC to your wallet. Should this be what you desire, tapping &quot;Withdraw Dividends&quot; is your answer.</p>
+                            <br />
+                        
+                            <h3 class="text-white">Activate Divies</h3>
+                            <p>Divies is a Smart Contract connected to Commonwealth, which receives ETC and distributes it to holders of Points. One can contribute to Divies either by sending ETC directly to it's <a href="https://blockscout.com/etc/mainnet/address/0xd1a231ae68ebe7aec3ecdaeac4c0776eb525d969/transactions" target="_blank" class="text-success">Contract Address</a>, or by using a Dapp or service like the <a href="https://commonwealth.gg/sponsor.html" target="_blank" class="text-success">Broadcaster</a>.</p>
+                            <br />
+                        
+                            <h3 class="text-white">Activate RainMaker</h3>
+                            <p>RainMaker is a special Smart Contract: It provides a guaranteed Price Floor for the Commonwealth Vault - RainMaker can only buy and receive more Points - it can never sell, spend or send them anywhere at all. <a href="https://medium.com/@masterhax/what-is-the-rainmaker-contract-bb0a77bc3b91" target="_blank" class="text-success">Learn More Here via the Medium Post about Rainmaker</a>.</p>
+                        </div>
+
+                        <div class="modal-footer bg-primary text-white">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Modals -->
+            <div class="modal" id="buyTokensModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header bg-primary text-white">
+                            <h4 class="modal-title text-white"><i class="fas fa-dollar-sign"></i>  Buy Points</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <div class="modal-body bg-primary text-white" id="buyArea">
+                            <h3 class="text-white"><strong>Price: </strong><span id="tokenBuyGet">0.0000</span></h3>
+                            <small>Right now, 1 Point costs <b><span id="priceUSD"></span> USD</b>.</small>
+                            <input placeholder="ETC to Spend..." class="form-control" type="text" id="buyInput"><br />
+                            <button id="buy" class="btn btn-block btn-success">Buy Points</button>
+                            <div id="buyAmount" class="ui fluid large basic green button approx no click buy-amount">
+                                <i>How much will you buy?</i>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer bg-primary text-white">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="modal" id="sellTokensModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header bg-primary text-white">
+                            <h4 class="modal-title text-white"><i class="fas fa-dollar-sign"></i>  Sell Points</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <div class="modal-body bg-primary text-white">
+                            <h3 class="text-white"><strong>Price: </strong><span class="buy-price" id="tokenSellGet">0.00</span></h3>
+                            <input placeholder="Points to Sell..." class="form-control" type="text" id="sellInput"><br />
+                            <button id="sell" class="btn btn-block btn-danger">Sell Points</button>
+                            <div id="sellAmount" class="ui fluid large basic blue button no click approx" style="margin-top:10px;">
+                                <i>How much will you sell?</i>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer bg-primary text-white">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="modal" id="transferTokensModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header bg-primary text-white">
+                            <h4 class="modal-title text-white"><i class="fas fa-long-arrow-alt-right"></i>  Transfer Points</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <div class="modal-body bg-primary text-white">
+                            <input type="text" id="transferAddress" class="form-control" placeholder="Destination Address"><br />
+                            <input type="text" id="transferTokenCount" class="form-control" placeholder="Amount of Points"><br />
+                            <button id="transfer" class="btn btn-block btn-info"><i class="right arrow icon"></i> Transfer</button>
+                        </div>
+
+                        <div class="modal-footer bg-primary text-white">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Sponsor Modals -->
+            <div class="modal" id="sponsorPurchaseModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header bg-primary text-white">
+                            <h4 class="modal-title text-white"><i class="fas fa-long-arrow-alt-right"></i>  Buy Adspace</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <div class="modal-body bg-primary text-white">
+                            <form class="ui form">
+                                <div class="form-group">
+                                    <label>Img URL (30x30) - Optional:</label>
+                                    <input type="text" id="imgLink" class="form-control" placeholder="https://i.imgur.com/7iEyv4Q.png">
+                                </div>
+                        
+                                <div class="form-group">
+                                    <label>Text</label>
+                                    <input type="text" id="text" class="form-control" placeholder="New ICO incoming!">
+                                </div>
+                        
+                                <div class="form-group">
+                                    <label>Link Text</label>
+                                    <input type="text" id="hyperlinkText" class="form-control" placeholder="Click Here.">
+                                </div>
+                        
+                                <div class="form-group">
+                                    <label>Link (include http/https):</label>
+                                    <input type="text" id="hyperlink" class="form-control" placeholder="https://company.com">
+                                </div>
+                            </form>
+                    
+                            <div class="row sponsor">
+                                <p>Preview: </p>
+                                <div id="sampleAd" class="current"></div>
+                            </div>
+                            <button id="sample"   class="btn btn-block btn-info">Generate Preview</button>
+                            <button id="purchase" class="btn btn-block btn-success">Purchase for <div id="price">price</div></button>
+                        </div>
+
+                        <div class="modal-footer bg-primary text-white">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="modal" id="sponsorDetailsModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header bg-primary text-white">
+                            <h4 class="modal-title text-white"><i class="fas fa-long-arrow-alt-right"></i>  Sponsor Details</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <div class="modal-body bg-primary text-white">
+                            <div class="row">
+                                <div class="col">
+                                    <h3 class="text-white">How to Broadcast</h3>
+                                    <p>
+                                        Using this tool will share a Broadcast (consisting of a link and some text) across the entire Commonwealth Network, and store it <i>immutably</i> on the Ethereum Classic (ETC) blockchain. Follow the five simple steps below to share your Broadcast - fees are distributed to holders of Points!
+                                    </p>
+                                
+                                    <ul>
+                                        <li>1. Make sure you have an <a target="_blank" href="https://forum.saturn.network/t/how-to-install-saturn-wallet-create-a-new-account/1302" class="text-success">ETC wallet</a> with ETC in it</li>
+                                        <li>2. Write some text for your Broadcast, and provide some text for the link that will be displayed alongside. Ensure both components together are 140 characters or less!</li>
+                                        <li>3. Add an image URL that leads directly to the image - this means the URL must end with .jpeg, .jpg, .gif, .svg or .png - this way, the Broadcaster can show the image properly.</li>
+                                        <li>4. Your image size must be 30px by 30px</li>
+                                        <li>5. Fill out the fields and click "Purchase" when ready</li>
+                                    </ul>
+                                    <br />
+                                
+                                    <p>
+                                        If you are into programming, you can also access the current Broadcast via the Commonwealth API - <a target="_blank" href="https://api.commonwealth.gg/sponsor/" class="text-success">Check it out</a>!
+                                    </p>
+                                </div>
+                            </div>
+                        
+                            <div class="row">
+                                <div class="col">
+                                    
+                                </div>
+                            </div>
+                            <h3 class="text-white">Current Broadcast: </h3>
+                            <p>
+                                <b>Owner <span id="owner"></span></b>
+                                <i><span id="time" class="sponsorPrice"></span><span id="purchasePrice" class="sponsorPrice"></span></i>
+                            </p>
+                        </div>
+
+                        <div class="modal-footer bg-primary text-white">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="modal" id="buyETCModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header bg-primary text-white">
+                            <h4 class="modal-title text-white"><i class="fas fa-long-arrow-alt-right"></i>  Buy ETC</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <div class="modal-body bg-primary text-white">
+                            <div class="container">
+                                <div class="row">
+                                    <ul>
+                                        <li><a href="https://binance.com" target="_blank" class="text-success">Binance.com - Global</a></li>
+                                
+                                        <li><a href="https://changelly.com" target="_blank" class="text-success">Changelly.com - Global</a></li>
+                                
+                                        <li><a href="https://moonpay.io" target="_blank" class="text-success">Moonpay.io - Global</a></li>
+                                
+                                        <li><a href="https://bestchange.com" target="_blank" class="text-success">Bestchange.com - RU, Asia</a></li>
+                                
+                                        <li><a href="https://coinbase.com" target="_blank" class="text-success">Coinbase.com - USA, EU, AU</a></li>
+                                
+                                        <li><a href="https://coinspot.com.au" target="_blank" class="text-success">Coinspot.com.au - AU</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer bg-primary text-white">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="assets/js/jquery.lazyload.min.js"></script>
