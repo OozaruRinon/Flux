@@ -1,8 +1,3 @@
-html, body {
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
 body {
   background: url('../img/wallpaper_2.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -17,4 +12,20 @@ body {
 
 .fluxElementDark2 {
     background-color: rgba(0,0,0,0.15);
+}
+
+.wallpaper1 {
+    background: url('../img/background.gif') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.wallpaper2 {
+    background: url('../img/wallpaper_2.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
 }
