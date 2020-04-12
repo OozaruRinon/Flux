@@ -186,7 +186,7 @@ function main() {
 	});
 	
 	p3cInstance.balanceOf(sacrific3CAddress, function(error, result){
-		el('#p3c').innerHTML = web3.fromWei(result, 'ether').toFixed(6) + ' Points';
+		el('#p3c').innerHTML = web3.fromWei(result, 'ether').toFixed(6) + ' P3C';
 	})
 }
 

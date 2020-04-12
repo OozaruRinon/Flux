@@ -46,7 +46,7 @@ $("#transfer").click(function () {
         displayError('Invalid Address')
     }
     if (amountToTransfer > parseInt(web3.fromWei(myCropTokens))) {
-        displayError('Not enough Points')
+        displayError('Not enough P3C')
     } else {
         transferFromCrop(destination, amountToTransfer)
     }
@@ -56,7 +56,7 @@ $('#buyInput').on('input change', function () {
     var value = parseFloat($(this).val())
     if (value > 0) {
         buyAmount = numberWithCommas((value / buyPrice).toFixed(1))
-        $('#buyAmount').text("Approx. " + buyAmount + " Points")
+        $('#buyAmount').text("Approx. " + buyAmount + " P3C")
     } else {
         $('#buyAmount').hide()
     }
