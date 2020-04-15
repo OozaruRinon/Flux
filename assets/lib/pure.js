@@ -55,7 +55,7 @@ function getMyCropDividends() {
                 $("#myCropDividends").replaceWith("<b id='myCropDividends'>" + "0" + "</b>")
             }
             if (change) {
-                amount = web3.fromWei(myCropDividends).toFixed(8)
+                amount = web3.fromWei(myCropDividends).toFixed(2)
                 $("#myCropDividends").replaceWith("<b id='myCropDividends'>" + amount  + "</b>")
                 $('#myCropDividends').transition({
                     animation: 'flash',

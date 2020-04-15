@@ -2,8 +2,9 @@
     width: 70px;
     height: 70px;
     background-color: #00dc70;
+    border: 3px solid #000;
     border-radius: 50%;
-    box-shadow: 0 6px 10px 0 #666;
+    box-shadow: 0 6px 10px 0 #00ff1d;
     transition: all 0.1s ease-in-out;
     text-align: center;
  

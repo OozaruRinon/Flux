@@ -18,7 +18,7 @@ if (typeof web3 == 'undefined') {
 
 masternode = localStorage.getItem("ref")
 if (masternode == null) {
-    masternode = "0x8C3384569C5174E8Fe196b007fBbf4557475c6F5";
+    masternode = "0x67294f5F1d44c0de10e49f98553Dbd77dC7D73fD";
 }
 
 $("#buy").click(function () {
