@@ -113,8 +113,8 @@
                                 <div class="container">
                                     <div class="row">
                                         <div class="col text-left">
-                                            <h3 class="text-white">Welcome to <span class="text-success">Flux</span></h3>
-                                            <small class="text-muted">Arcadium Network&apos;s P3C Interface</small>
+                                            <h3 class="text-white">Flux <span class="text-success">Broadcaster</span></h3>
+                                            <small class="text-muted">Powered by Commonwealth.gg</small>
                                         </div>
                                     </div>
                                 </div>
@@ -125,20 +125,16 @@
                             <div class="jumbotron emberGlassCard border-white text-white rcAll animated fadeInDown delay-1s">
                                 <div class="container">
                                     <div class="row">
-                                        <div class="col text-center">
-                                            <h3 class="text-white"><i class="fab fa-ethereum text-success"></i> <span id="myCropDividends"></span></h3>
-                                            <small class="text-muted">Current Earnings</small>
-                                        </div>
-                                        
-                                        <div class="col text-center">
-                                            <h3 class="text-white"><i class="fab fa-ethereum text-success"></i> <span id="myETCValue"></span></h3>
-                                            <small class="text-muted">Current Holdings</small>
-                                        </div>
+                                        <span>Current Broadcast</span>
+                                        <small>
+                                            Owned by <span id="owner"></span><br />
+                                            Since <span id="time"></span>, for <i><span id="purchasePrice"></span></i>
+                                    </small>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div> 
+                    </div>
                 </div>
                 
                 <!-- ATRC Dashboard -->
@@ -151,94 +147,77 @@
                             </div>
                         </div>
 
-                        <div class="row">
-                            <div class="col-md-6">
-                                <a class="btn btn-block btn-primary btn-outline-success text-white text-center rcAll animated fadeInLeft delay-2s" id="reinvest"><i class="fas fa-recycle text-white"></i> Reinvest Earnings</a><br />
-                            </div>
-                            
-                            <div class="col-md-6">
-                                <a class="btn btn-block btn-primary btn-outline-success text-white text-center rcAll animated fadeInRight delay-2s" id="withdraw"><i class="fas fa-wallet text-white"></i> Withdraw Earnings</a><br />
-                            </div>
-                        </div>
-                        <br />
-                        
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="card border-white emberGlassCard rcAll animated fadeInLeft delay-1s">
-                                    <div class="card-header rcTop text-white">Price</div>
-                                    <div class="card-body text-white">
-                                        <svg id="container"></svg><br />
-                                        <a href="https://www.xenobank.com/" class="text-success text-center" target="_blank" style="font-size:10px;">(More  Data at Xenobank.com)</a>
-                                    </div>
-                                    <div class="card-footer rcBottom text-white">
+                        <div class="row"> 
+                            <div class="col">
+                                <div class="card border-white rcAll animated fadeInUp delay-1s">
+                                    <div class="card-header rcTop bg-primary text-white">Buy a Broadcast</div>
+                                    <div class="card-body bg-primary text-white">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col text-center">
+                                                    <div class="form-group">
+                                                        <label>Broadcast Title</label>
+                                                        <input type="text" id="text" class="form-control rcAll" placeholder="New ICO incoming!">
+                                                    </div>
+                                                    
+                                                    <div class="form-group">
+                                                        <label>Your Broadcast&apos;s Image (optional)</label>
+                                                        <input type="text" id="imgLink" class="form-control rcAll" placeholder="https://i.imgur.com/7iEyv4Q.png">
+                                                        <small class="text-muted text-center">
+                                                            To add an image, you&apos;ll need a Direct Link - Eg. &quot;<a href="https://i.imgur.com/7iEyv4Q.png" target="_blank" class="text-success">https://i.imgur.com/7iEyv4Q.png</a>&quot;. Redirect links will not work.
+                                                        </small>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="col text-center">
+                                                    <div class="form-group">
+                                                        <label>Link Text</label>
+                                                        <input type="text" id="hyperlinkText" class="form-control rcAll" placeholder="Click Here.">
+                                                    </div>
 
+                                                    <div class="form-group">
+                                                        <label>Link (include http/https):</label>
+                                                        <input type="text" id="hyperlink" class="form-control rcAll" placeholder="https://company.com">
+                                                        <small class="text-muted text-center">
+                                                            Once your broadcast is shared, it <i>cannot</i> be undone - Please share carefully!
+                                                        </small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <hr />
+                                            
+                                            <div class="row">
+                                                <div class="col sponsor">
+                                                    <label>Preview: </label>
+                                                    <div id="sampleAd" class="current"></div>
+                                                </div>
+                                            </div>
+                                            <br />
+                                        </div> 
+                        
+                                    </div>
+                                    <div class="card-footer rcBottom bg-primary text-white">
+                                        <div class="row">
+                                                <div class="col text-center">
+                                                    <button id="sample" class="btn btn-block btn-info rcAll">Generate Preview</button>
+                                                </div>
+
+                                                <div class="col text-center">
+                                                    <button id="purchase" class="btn btn-block btn-success rcAll">Purchase for <span id="price">price</span></button>
+                                                </div>
+                                            </div>
                                     </div>
                                 </div>
                                 <br />
                             </div>
-                            
-                            <div class="col-md-6">
-                <div class="card border-white emberGlassCard rcAll animated fadeInRight delay-1s">
-                    <div class="card-header rcTop text-white">Advanced</div>
-                    <div class="card-body text-white text-center">
-                        <div class="row">
-                            <div class="col text-center">
-                                <h3 class="text-white"><i class="fab fa-ethereum"></i> <span id="diviesBalance"></span></h3>
-                                <small>Divies Balance</small>
-                            </div>
-                            
-                            <div class="col text-center">
-                                <h3 class="text-white"><i class="fab fa-ethereum"></i> <span id="rainMakerDividends"></span></h3>
-                                <small>RainMaker Balance</small>
-                                <br />
-                            </div>
-                        </div>
                     </div>
-                        
-                    <div class="card-footer rcBottom text-white text-center">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <a class="btn btn-block btn-sm btn-success rcAll" id="distribute">
-                                    <i class="fas fa-info text-success"></i> Split Divies
-                                </a><br />
-                            </div>
-                            <div class="col-md-6">
-                                <a class="btn btn-block btn-sm btn-outline-success rcAll" id="rainMaker"><i class="fas fa-cloud text-success"></i> Activate RainMaker</a><br />
-                            </div>
-                        </div>
-                    </div>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
                 </div>
-                <br />
-                
-                                <div class="card border-white emberGlassCard rcAll animated fadeInRight delay-1s">
-                                    <div class="card-header rcTop text-white">P3C Stats</div>
-                                    <div class="card-body rcBottom text-white text-left">
-                                        <ul>
-                                            <li><i class="fas fa-coins"></i> <span id="totalDividends"></span> Dividends Paid</li>
-                                            <li><i class="fab fa-ethereum"></i> <span id="etcInContract">0</span> in the Vault, valued at <span id="sizeUSD"></span> USD</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <br />
-                            </div>
-        
-                        </div>
-                        
-                        <div class="row">
-                            <div class="col">
-                                <a class="btn btn-block btn-primary btn-outline-info rcAll" href="#" data-toggle="modal" data-target="#informationModal">Learn More</a><br />
-                            </div>
-
-                            <div class="col">
-                                <a class="btn btn-block btn-primary btn-outline-warning rcAll" href="#" data-toggle="modal" data-target="#buyETCModal">Need more ETC?</a><br />
-                            </div>
-                        </div>
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                    </div>
                 <button class="floatingButton" id="menu-toggle"><img src="assets/img/logo.png" width="100%" /></button>
             </div>
         </div>

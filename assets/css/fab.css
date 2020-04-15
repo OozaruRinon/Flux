@@ -1,8 +1,8 @@
 .floatingButton {
     width: 70px;
     height: 70px;
-    background-color: #00dc70;
-    border: 3px solid #000;
+    background-color: #000;
+    border: 3px solid #fff;
     border-radius: 50%;
     box-shadow: 0 6px 10px 0 #00ff1d;
     transition: all 0.1s ease-in-out;
@@ -14,6 +14,6 @@
 }
  
 .floatingButton:hover {
-   box-shadow: 0 6px 14px 0 #00dc70;
+   box-shadow: 0 6px 14px 0 #3c3c3c;
    transform: scale(1.05);
 }
