@@ -55,7 +55,7 @@ function getMyCropDividends() {
                 $("#myCropDividends").replaceWith("<b id='myCropDividends'>" + "0" + "</b>")
             }
             if (change) {
-                amount = web3.fromWei(myCropDividends).toFixed(8)
+                amount = web3.fromWei(myCropDividends).toFixed(2)
                 $("#myCropDividends").replaceWith("<b id='myCropDividends'>" + amount  + "</b>")
                 $('#myCropDividends').transition({
                     animation: 'flash',
@@ -131,7 +131,7 @@ function sellFromCrop(amountToSell) {
         },
         function (error, result) { //get callback from function which is your transaction key
             if (!error) {
-                alertify.success(amountToSell + " Points Sold - Waiting for Blockchain")
+                alertify.success(amountToSell + " P3C Sold - Waiting for Blockchain")
                 console.log(result);
             } else {
                 console.log(error);
@@ -149,7 +149,7 @@ function reinvestFromCrop(referrer) {
         },
         function (error, result) { //get callback from function which is your transaction key
             if (!error) {
-                alertify.success("Reinvested Points - Waiting for Blockchain")
+                alertify.success("Reinvested P3C - Waiting for Blockchain")
                 console.log(result);
             } else {
                 console.log(error);
@@ -185,7 +185,7 @@ function transferFromCrop(destination, amountToTransfer) {
         },
         function (error, result) { //get callback from function which is your transaction key
             if (!error) {
-                alertify.success("Transferring " + amountToTransfer + " Points to " + destination.substring(0, 7) + "...")
+                alertify.success("Transferring " + amountToTransfer + " P3C to " + destination.substring(0, 7) + "...")
                 console.log(result);
             } else {
                 console.log(error);

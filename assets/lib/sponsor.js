@@ -20,17 +20,17 @@ ad.globalAd.call(function (err, result) {
 });
 
 ad.owner.call(function (err, result) {
-	$("#owner").html("<b>Address:</b> " + result);
+	$("#owner").html(result);
 });
 
 ad.purchasePrice.call(function (err, result) {
 	price = parseFloat(web3.fromWei(result.toNumber()))
-	$("#purchasePrice").html("<br><b>Paid:</b> " + price + " ETC");
+	$("#purchasePrice").html(price + " ETC");
 });
 
 ad.purchaseTime.call(function (err, result) {
 	d = moment.unix(result).format('dddd, MMMM Do, YYYY h:mm:ss A');
-	$("#time").html("<br><b>Bought:</b> " + d);
+	$("#time").html(d);
 });
 
 $("#purchase").click(function () {

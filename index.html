@@ -1,465 +1,500 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <meta charset="utf8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-        
-        <!-- Twitter Metas -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Arcadium Network is a multi-chain project platform aiming towards a more decentralised future. Join in today!">
+        <meta name="author" content="Arcadium Network">
+
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:creator" content="@ArcadiumETC" />
         <meta name="twitter:title" content="Arcadium Network" />
-        <meta name="twitter:description" content="Arcadium Network is a Platform building upon Ethereum Classic, Working towards a more decentralised future." />
-        <meta name="twitter:image" content="https://arcadium.network/assets/img/coin.png"/>
+        <meta name="twitter:description" content="Arcadium Network is a multi-chain project platform aiming towards a more decentralised future. Join in today!" />
+        <meta name="twitter:image" content="https://flux.arcadium.network/assets/img/coin.png"/>
         
-        <!-- OpenGraph Metas -->
-        <meta property="og:url" content="https://arcadium.network" />
+        <meta property="og:url" content="https://flux.arcadium.network" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Arcadium Network" />
-        <meta property="og:description" content="Arcadium Network - a Platform building on Ethereum Classic, Working towards a decentralised future." />
+        <meta property="og:title" content="Flux" />
+        <meta property="og:description" content="Arcadium Network is a multi-chain project platform aiming towards a more decentralised future. Join in today!" />
         <meta property="og:image" content="https://flux.arcadium.network/assets/img/coin.png"/>
         
-        <title>Arcadium Network</title>
-        
-        <meta name="description" content="Arcadium Network - a Platform building on Ethereum Classic, Working towards a decentralised future.">
         <meta name="keywords" content="Payments, Payment Processing, Live Streaming, ETC Dapps, Ethereum Classic, ETC, Universal Basic Income Dapp, UBI Dapp, UBI Ethereum, Universal Basic income Ethereum, Employment Insurance, Blockchain Insurance, Coops, Cooperative, Blockchain, Blockchain Technology, Arcadium, Arcadium Network, Flux, Korax, Power Inc, Vault, Race Arena">
-
-        <!-- CSS -->
-        <link rel="stylesheet" href="assets/css/alertify.min.css" />
-
-        <link rel="stylesheet" href="assets/css/farmer.css" />
-        <link rel="stylesheet" href="assets/css/animate.css" />
-        <link rel="stylesheet" href="assets/css/scrollFix.css" />
-        <link rel="stylesheet" href="assets/css/professional_style.css" />
-        <link rel="stylesheet" href="assets/css/bootstrap.carousel.css" />
-        <link rel="stylesheet" href="assets/css/themes/default.min.css" />
-    
-    
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    
-        <script src="assets/js/modernizr.min.js"></script>
-        <script src="https://kit.fontawesome.com/f352960784.js" crossorigin="anonymous"></script>
-
-        <!-- Bootstrap theme -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/lux/bootstrap.min.css">
-
-        <link rel="icon" type="image/png" href="assets/img/etc.png">
-    
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156455321-1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'UA-156455321-1');
-        </script>
         
-        <script>
-            var clipboard = new Clipboard(".donateLink");
-        </script>
+        <title>Flux | Arcadium Network</title>
+
+        <!-- Core CSS -->
+        <link rel="stylesheet" href="assets/css/bootstrap.carousel.css">
+        
+        <!-- Animations and Alertify -->
+        <link rel="stylesheet" href="assets/css/animate.css">
+        <link rel="stylesheet" href="assets/css/alertify.min.css">
+        <link rel="stylesheet" href="assets/css/themes/bootstrap.min.css">
+        
+        <!-- Bootswatch Theme -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        
+        <!-- Custom styles for this template -->
+        <link rel="stylesheet" href="assets/css/fab.css">
+        <link rel="stylesheet" href="assets/css/ember.css">
+        <link rel="stylesheet" href="assets/css/sidebar.css">
+        <link rel="stylesheet" href="assets/css/loader.css">
+        
+        <link rel="icon" type="image/png" href="assets/img/etc.png">
+        
+        <!-- Modernizr -->
+        <script src="assets/js/modernizr.min.js"></script>
+        
+        <!-- FontAwesome -->
+        <script src="https://kit.fontawesome.com/f352960784.js" crossorigin="anonymous"></script>
     </head>
 
-    <body class="bg-primary text-white wallpaper1">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
-            <a class="navbar-brand" href="index.html"><img src="./assets/img/logo.png" alt="Logo" style="width:40px;"> ARCADIUM</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <body class="emberWallpaper">
+        <div class="d-flex" id="wrapper">
 
-            <div class="collapse navbar-collapse" id="navbarColor02">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item"><a class="nav-link" href="flux.html"><i class="fas fa-coins text-success"></i> Flux</a></li>
-                    <li class="nav-item"><a class="nav-link" href="timelock.html"><i class="far fa-clock text-success"></i> Timelock</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://games.arcadium.network" target="_blank"><i class="fas fa-dice text-success"></i> Games</a></li>
-                </ul>
-            
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item dropdown">
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            <i class="fas fa-cubes text-success"></i> Social <span class="caret"></span>
-                        </a>
-
-                        <div class="dropdown-menu dropdown-menu-right border-success bg-primary text-white" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item text-white" href="https://discord.gg/7fCvU2h" target="_blank"><i class="fab fa-discord text-success"></i> Discord</a>
-                            <a class="dropdown-item text-white" href="https://twitter.com/ArcadiumETC" target="_blank"><i class="fab fa-twitter text-success"></i> Twitter</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center">
-                    <div class="jumbotron bg-primary text-white">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col">
-                                    <img src="assets/img/logo.png" width="130px" height="130px" /><br />
-                                    <br />
-                                    <h3 class="text-white">Arcadium Network</h3>
-                                    <p class="text-success">DeFi Project Platform on ETC</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <br />
+            <!-- Sidebar -->
+            <div class="border-light emberGlassCard" id="sidebar-wrapper">
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <div class="sidebar-heading text-white">
+                    <small class="text-muted">Current Balance</small>
+                    <h4 class="text-white"><i class="fas fa-wallet text-success"></i> <span id="myCropTokens">-</span> P3C</h4>
                 </div>
-                
-                <div class="col-md-6 text-center">
-                    <div class="jumbotron bg-primary text-white">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col">
-                                    <img src="assets/img/etc-logo-transparent.png" width="80px" height="130px" /><br />
-                                    <br />
-                                    <h3 class="text-white"><span id="etcInContract">0</span> (<span id="sizeUSD"></span> USD)</h3>
-                                    <p class="text-success">in the Commonwealth.gg Vault</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <br />
+                <br />
+                <b class="sidebar-heading text-white"> // MENU</b>
+                <div class="list-group list-group-flush">
+                    <a class="list-group-item list-group-item-action emberGlassButton text-white" href="index.html"><i class="fas fa-rocket text-white"></i>  Dashboard</a>
+                    <a class="list-group-item list-group-item-action emberGlassButton text-white" href="broadcast.html"><i class="fas fa-ad text-white"></i>  Broadcast</a>
                 </div>
-            </div>
-            
-            <div class="row">
-                <div class="col-md-4">
-                    <a class="btn btn-block btn-md btn-success" href="flux.html"><i class="fas fa-coins text-white"></i> Flux</a><br />
+                <br />
+                <b class="sidebar-heading text-white"> // TRADE</b>
+                <div class="list-group list-group-flush">
+                    <a href="#" class="list-group-item list-group-item-action emberGlassButton text-white" data-toggle="modal" data-target="#buyTokensModal"><i class="fas fa-dollar-sign text-success"></i>  Buy P3C</a>
+                    <a href="#" class="list-group-item list-group-item-action emberGlassButton text-white" data-toggle="modal" data-target="#sellTokensModal"><i class="fas fa-dollar-sign text-danger"></i>  Sell P3C</a>
+                    <a href="#" class="list-group-item list-group-item-action emberGlassButton text-white" data-toggle="modal" data-target="#transferTokensModal"><i class="far fa-paper-plane text-warning"></i> Transfer</a>
                 </div>
-                
-                <div class="col-md-4">
-                    <a class="btn btn-block btn-md btn-info" href="https://games.arcadium.network" target="_blank"><i class="fas fa-dice text-white"></i> Games</a><br />
+                <br />
+                <b class="sidebar-heading text-white"> // RESOURCES</b>
+                <div class="list-group list-group-flush">
+                    <a href="https://github.com/ArcadiumNetwork" target="_blank" class="list-group-item list-group-item-action emberGlassButton text-white"><i class="fab fa-github text-info"></i>  GitHub</a>
                 </div>
-                
-                <div class="col-md-4">
-                    <a class="btn btn-block btn-md btn-warning" href="timelock.html"><i class="far fa-clock text-white"></i> TimeLock</a><br />
-                </div>
-            </div>
-            <br />
-            
-            <footer class="container jumbotron bg-primary py-5">
-        <div class="row">
-            <div class="col-12 col-md">
-                <small class="d-block mb-3 text-muted">This website was built with &lt;3, by the Core Dev Team of Arcadium Network, for the world. Any donations are greatly appreciated!</small>
-                <a class="btn btn-sm btn-block btn-success" href="#" data-toggle="modal" data-target="#donateModal">Donate to Arcadium</a>
                 <br />
             </div>
-            <div class="col-6 col-md">
-                <h5 class="text-white">Arcadium</h5>
-                <ul class="list-unstyled text-small">
-                    <li><a class="text-muted" href="flux.html">Flux</a></li>
-                    <li><a class="text-muted" href="timelock.html">Vault</a></li>
-                    <li><a class="text-muted" href="https://games.arcadium.network/powerinc">Power Inc.</a></li>
-                    <li><a class="text-muted" href="https://games.arcadium.network/racearena">Race Arena</a></li>
-                </ul>
-            </div>
-            <div class="col-6 col-md">
-                <h5 class="text-white">ETC Friends</h5>
-                <ul class="list-unstyled text-small">
-                    <li><a class="text-muted" href="https://universalcoin.io" target="_blank">UniversalCoin</a></li>
-                    <li><a class="text-muted" href="https://commonwealth.gg" target="_blank">Commonwealth</a></li>
-                </ul>
-            </div>
-            <div class="col-6 col-md">
-                <h5 class="text-white">Developers</h5>
-                <ul class="list-unstyled text-small">
-                    <li><a class="text-muted" href="https://github.com/ArcadiumNetwork" target="_blank">GitHub</a></li>
-                </ul>
-            </div>
-            <div class="col-6 col-md">
-                <h5 class="text-white">About</h5>
-                <ul class="list-unstyled text-small">
-                    <li><a class="text-muted" href="https://twitter.com/ArcadiumETC" target="_blank">Twitter</a></li>
-                    <li><a class="text-muted" href="https://instagram.com/arcadiumnetwork" target="_blank">Instagram</a></li>
-                    <li><a class="text-muted" href="https://discord.gg/7fCvU2h" target="_blank">Discord</a></li>
-                </ul>
+            <!-- /#sidebar-wrapper -->
+
+            <!-- Page Content -->
+            <div id="page-content-wrapper">
+                <nav class="navbar navbar-expand-lg navbar-dark border-light fixed-top" style="background-color: #000;">
+                    <a href="index.html" class="navbar-brand text-white"><img src="assets/img/logo.png" width="40px" /> ARCADIUM</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item"><a class="nav-link" href="https://discord.gg/Tk8ynre" target="_blank"><i class="fab fa-discord text-success"></i> Discord</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://twitter.com/ArcadiumETC" target="_blank"><i class="fab fa-twitter text-success"></i> Twitter</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://github.com/ArcadiumNetwork" target="_blank"><i class="fab fa-github text-success"></i> GitHub</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://blockscout.com/etc/mainnet/address/0xde6fb6a5adbe6415cdaf143f8d90eb01883e42ac/contracts" target="_blank"><i class="fas fa-search-dollar text-success"></i> Contract</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                
+                <div id="loader-wrapper">
+                    <div id="loader"></div>
+                    <div class="loader-section section-left"></div>
+                    <div class="loader-section section-right"></div>
+                </div>
+                
+                <div id="content" class="container">
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="jumbotron emberGlassCard border-white text-white rcAll animated fadeInDown delay-1s">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col text-left">
+                                            <h3 class="text-white">Welcome to <span class="text-success">Flux</span></h3>
+                                            <small class="text-muted">Arcadium Network&apos;s P3C Interface</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="jumbotron emberGlassCard border-white text-white rcAll animated fadeInDown delay-1s">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col text-center">
+                                            <h3 class="text-white"><i class="fab fa-ethereum text-success"></i> <span id="myCropDividends"></span></h3>
+                                            <small class="text-muted">Current Earnings</small>
+                                        </div>
+                                        
+                                        <div class="col text-center">
+                                            <h3 class="text-white"><i class="fab fa-ethereum text-success"></i> <span id="myETCValue"></span></h3>
+                                            <small class="text-muted">Current Holdings</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                            <div class="col text-center">
+                                <div class="alert alert-dismissible alert-success rcAll animated fadeInDown delay-2s">
+                                    <a href="https://discord.gg/Tk8ynre" target="_blank"><i class="fab fa-discord text-dark"></i> <strong>HEY!</strong> Join our Discord Server, and be a part of the Arcadium Network! <i class="fab fa-discord text-dark"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 col-sm-3">
+                                <a class="btn btn-block btn-primary btn-outline-success text-white text-center rcAll animated fadeInLeft delay-2s" id="reinvest"><i class="fas fa-recycle text-white"></i> Reinvest Earnings</a><br />
+                            </div>
+                            
+                            <div class="col-md-6 col-sm-3">
+                                <a class="btn btn-block btn-primary btn-outline-success text-white text-center rcAll animated fadeInRight delay-2s" id="withdraw"><i class="fas fa-wallet text-white"></i> Withdraw Earnings</a><br />
+                            </div>
+                        </div>
+                        <br />
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card border-white emberGlassCard rcAll animated fadeInLeft delay-1s">
+                                    <div class="card-header rcTop text-white">Price</div>
+                                    <div class="card-body text-white">
+                                        <svg id="container"></svg><br />
+                                        <a href="https://www.xenobank.com/" class="text-success text-center" target="_blank" style="font-size:10px;">(More  Data at Xenobank.com)</a>
+                                    </div>
+                                    <div class="card-footer rcBottom text-white">
+
+                                    </div>
+                                </div>
+                                <br />
+                            </div>
+                            
+                            <div class="col-md-6">
+                <div class="card border-white emberGlassCard rcAll animated fadeInRight delay-1s">
+                    <div class="card-header rcTop text-white">Advanced</div>
+                    <div class="card-body text-white text-center">
+                        <div class="row">
+                            <div class="col text-center">
+                                <h3 class="text-white"><i class="fab fa-ethereum"></i> <span id="diviesBalance"></span></h3>
+                                <small>Divies Balance</small>
+                            </div>
+                            
+                            <div class="col text-center">
+                                <h3 class="text-white"><i class="fab fa-ethereum"></i> <span id="rainMakerDividends"></span></h3>
+                                <small>RainMaker Balance</small>
+                                <br />
+                            </div>
+                        </div>
+                    </div>
+                        
+                    <div class="card-footer rcBottom text-white text-center">
+                        <div class="row">
+                            <div class="col">
+                                <a class="btn btn-block btn-sm btn-success rcAll" id="distribute">
+                                    <i class="fas fa-info text-white"></i> Split Divies
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a class="btn btn-block btn-sm btn-outline-success rcAll" id="rainMaker"><i class="fas fa-cloud text-success"></i> Make it Rain</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                
+                                <div class="card border-white emberGlassCard rcAll animated fadeInRight delay-1s">
+                                    <div class="card-header rcTop text-white">P3C Stats</div>
+                                    <div class="card-body rcBottom text-white text-left">
+                                        <ul>
+                                            <li><i class="fas fa-coins"></i> <span id="totalDividends"></span> Dividends Paid</li>
+                                            <li><i class="fab fa-ethereum"></i> <span id="etcInContract">0</span> in the Vault, valued at <span id="sizeUSD"></span> USD</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <br />
+                            </div>
+        
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col">
+                                <a class="btn btn-block btn-primary btn-outline-info rcAll" href="#" data-toggle="modal" data-target="#informationModal">Learn More</a><br />
+                            </div>
+
+                            <div class="col">
+                                <a class="btn btn-block btn-primary btn-outline-warning rcAll" href="#" data-toggle="modal" data-target="#buyETCModal">Need more ETC?</a><br />
+                            </div>
+                        </div>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                </div>
+
+                <button class="floatingButton" id="menu-toggle"><img src="assets/img/logo.png" width="100%" /></button>
             </div>
         </div>
-    </footer>
-        <br />
-        <br />
-        <br />
-        <br />
-
-    <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-primary">
+        
+        <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark" style="background-color: #000;">
             <a class="navbar-brand" href="#"></a>
-            <div class="navbar-collapse collapse" id="navbarCollapse" style="">
-                <ul class="navbar-nav mr-auto">
+            <div class="navbar-collapse collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto ml-auto">
                     <div id="current"></div>
-                </ul>
-          
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" data-toggle="modal" data-target="#sponsorPurchaseModal">Buy this Space</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" data-toggle="modal" data-target="#sponsorDetailsModal">Learn More</a>
-                    </li>
                 </ul>
             </div>
         </nav>
-    </div>
-    
-    <!-- MODALS -->
-    <div class="modal" id="donateModal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header bg-primary text-white">
-                    <h4 class="modal-title text-white"><i class="fas fa-long-arrow-alt-right"></i>  Donate to Arcadium</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-
-                <div class="modal-body bg-primary text-white">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col text-center">
-                                <img src="assets/img/avatars/deano.png" alt="Deano" width="50px" height="50px"><br />
-                                <b>Deano</b><br />
-                                <input type="hidden" id="deanoETC" value="DeanoETCAddressGoesHere" />
-                            </div>
-                            
-                            <div class="col text-center">
-                                <img src="assets/img/avatars/rinon.png" alt="Rinon" width="50px" height="50px"><br />
-                                <b>Rinon</b><br />
-                                <input type="hidden" id="rinonETC" value="RinonETCAddressGoesHere" />
-                            </div>
-                            
-                            <div class="col text-center">
-                                <img src="assets/img/avatars/birdman.png" alt="Birdman" width="50px" height="50px"><br />
-                                <b>Birdman</b><br />
-                                <input type="hidden" id="birdmanETC" value="BirdmanETCAddressGoesHere" />
-                            </div>
-                            
-                            <div class="col text-center">
-                                <img src="assets/img/avatars/skinner.png" alt="SirSkinner" width="50px" height="50px"><br />
-                                <b>SirSkinner</b><br />
-                                <input type="hidden" id="sirskinnerETC" value="SkinnerETCAddressGoesHere" />
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="text-center">
-                        <br />
-                        <b>Arcadium Network Core Dev Team Wallet: </b>
-                        <code>0x2fA2c7907Cbc1Bd143861566d23Cd83200C9be9b</code><br />
-                        <a class="btn btn-block btn-sm btn-outline-success" href="https://classic.etccoopexplorer.com/address/0x2fa2c7907cbc1bd143861566d23cd83200c9be9b/transactions" target="_blank">View on Blockscout</a><br />
-                        
-                        <br />
-                        <p>Thank you very much for considering a donation to Arcadium Network! Before you continue, please be aware that anything sent to our addresses cannot be refunded - so please, only send what you can absolutely afford, and ensure you double-check details prior to making transactions.</p>
-                    </div>
-                </div>
-
-                <div class="modal-footer bg-primary text-white">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
         
+        <!-- Modals -->
         <div class="modal" id="informationModal">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header bg-primary text-white">
-                        <h4 class="modal-title text-white"><i class="fas fa-dollar-sign"></i>  What is This?</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
+                <div class="modal-dialog">
+                    <div class="modal-content border-white rcAll">
+                        <div class="modal-header bg-primary text-white rcTop">
+                            <h4 class="modal-title text-white"><i class="fas fa-dollar-sign"></i>  What is This?</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
 
-                    <div class="modal-body bg-primary text-white" id="buyArea">
-                        <h3 class="text-white">Compound Dividends</h3>
-                        <p>When others Buy and Sell their points, you will earn Dividends proportionate to how many points you hold. These Dividends are awarded in ETC, so you have a couple of options. If you choose to compound your Dividends, the ETC you have earned from others will be used to buy more Points, thus meaning you could earn more at a faster rate.</p>
-                        <br />
+                        <div class="modal-body bg-primary text-white" id="buyArea">
+                            <h3 class="text-white">Compound Dividends</h3>
+                            <p>When others Buy and Sell their points, you will earn Dividends proportionate to how many points you hold. These Dividends are awarded in ETC, so you have a couple of options. If you choose to compound your Dividends, the ETC you have earned from others will be used to buy more P3C, thus meaning you could earn more at a faster rate.</p>
+                            <br />
                         
-                        <h3 class="text-white">Withdraw Dividends</h3>
-                        <p>If you build up a nice amount of Dividends, you may choose not to buy more Points, but instead withdraw the ETC to your wallet. Should this be what you desire, tapping &quot;Withdraw Dividends&quot; is your answer.</p>
-                        <br />
+                            <h3 class="text-white">Withdraw Dividends</h3>
+                            <p>If you build up a nice amount of Dividends, you may choose not to buy more P3C, but instead withdraw the ETC to your wallet. Should this be what you desire, tapping &quot;Withdraw Dividends&quot; is your answer.</p>
+                            <br />
                         
-                        <h3 class="text-white">Activate Divies</h3>
-                        <p>Divies is a Smart Contract connected to Commonwealth, which receives ETC and distributes it to holders of Points. One can contribute to Divies either by sending ETC directly to it's <a href="https://blockscout.com/etc/mainnet/address/0xd1a231ae68ebe7aec3ecdaeac4c0776eb525d969/transactions" target="_blank" class="text-success">Contract Address</a>, or by using a Dapp or service like the <a href="https://commonwealth.gg/sponsor.html" target="_blank" class="text-success">Broadcaster</a>.</p>
-                        <br />
+                            <h3 class="text-white">Activate Divies</h3>
+                            <p>Divies is a Smart Contract connected to Commonwealth, which receives ETC and distributes it to holders of P3C. One can contribute to Divies either by sending ETC directly to it's <a href="https://blockscout.com/etc/mainnet/address/0xd1a231ae68ebe7aec3ecdaeac4c0776eb525d969/transactions" target="_blank" class="text-success">Contract Address</a>, or by using a Dapp or service like the <a href="https://commonwealth.gg/sponsor.html" target="_blank" class="text-success">Broadcaster</a>.</p>
+                            <br />
                         
-                        <h3 class="text-white">Activate RainMaker</h3>
-                        <p>RainMaker is a special Smart Contract: It provides a guaranteed Price Floor for the Commonwealth Vault - RainMaker can only buy and receive more Points - it can never sell, spend or send them anywhere at all. <a href="https://medium.com/@masterhax/what-is-the-rainmaker-contract-bb0a77bc3b91" target="_blank" class="text-success">Learn More Here via the Medium Post about Rainmaker</a>.</p>
-                    </div>
+                            <h3 class="text-white">Activate RainMaker</h3>
+                            <p>RainMaker is a special Smart Contract: It provides a guaranteed Price Floor for the Commonwealth Vault - RainMaker can only buy and receive more P3C - it can never sell, spend or send them anywhere at all. <a href="https://medium.com/@masterhax/what-is-the-rainmaker-contract-bb0a77bc3b91" target="_blank" class="text-success">Learn More Here via the Medium Post about Rainmaker</a>.</p>
+                        </div>
 
-                    <div class="modal-footer bg-primary text-white">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        <div class="modal-footer bg-primary text-white rcBottom">
+                            <button type="button" class="btn btn-block btn-danger rcAll" data-dismiss="modal">Close</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    
-    <!-- Sponsor Modals -->
-    <div class="modal" id="sponsorPurchaseModal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header bg-primary text-white">
-                    <h4 class="modal-title text-white"><i class="fas fa-long-arrow-alt-right"></i>  Buy Adspace</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-
-                <div class="modal-body bg-primary text-white">
-                    <form class="ui form">
-                        <div class="form-group">
-                            <label>Img URL (30x30) - Optional:</label>
-                            <input type="text" id="imgLink" class="form-control" placeholder="https://i.imgur.com/7iEyv4Q.png">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label>Text</label>
-                            <input type="text" id="text" class="form-control" placeholder="New ICO incoming!">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label>Link Text</label>
-                            <input type="text" id="hyperlinkText" class="form-control" placeholder="Click Here.">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label>Link (include http/https):</label>
-                            <input type="text" id="hyperlink" class="form-control" placeholder="https://company.com">
-                        </div>
-                    </form>
-                    
-                    <div class="row sponsor">
-                        <p>Preview: </p>
-                        <div id="sampleAd" class="current"></div>
-                    </div>
-                    <button id="sample"   class="btn btn-block btn-info">Generate Preview</button>
-                    <button id="purchase" class="btn btn-block btn-success">Purchase for <div id="price">price</div></button>
-                </div>
-
-                <div class="modal-footer bg-primary text-white">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-        </div>
-
-        <div class="modal" id="sponsorInstructorModal">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header bg-primary text-white">
-                        <h4 class="modal-title text-white"><i class="fas fa-long-arrow-alt-right"></i>  How to Use</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-
-                    <div class="modal-body bg-primary text-white">
-                        <p>
-                            Store your ad on-chain and show it across the Commonwealth network!<br />
-                            There are 2 simple steps to broadcasting on the Commonwealth network.
-                        </p>
-                        <ul>
-                            <li>1. Make sure you have an <a target="_blank" href="https://forum.saturn.network/t/how-to-install-saturn-wallet-create-a-new-account/1302">ETC wallet</a> with ETC in it.</li>
-                            <li>2. Fill out the fields below "Buy It!" and click "Purchase" when ready.</li>
-                        </ul>
-                        <h3 class="text-white">Rules: </h3>
-                        <ul>
-                            <li>Length of Text AND Link Text less than 140 characters. Img link 30 x 30.</li>
-                            <li>Your image link should link to the actual image, make sure URL ends with .jpeg , .jpg , .gif , .svg, or .png</li>
-                            <li>Broadcast is stored permanently on the blockchain and can be read by any Ethereum Classic node! Also hosted on our <a target="_blank" href="https://api.commonwealth.gg/sponsor/">server</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="modal-footer bg-primary text-white">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-        <div class="modal" id="sponsorDetailsModal">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header bg-primary text-white">
-                        <h4 class="modal-title text-white"><i class="fas fa-long-arrow-alt-right"></i>  Sponsor Details</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-
-                    <div class="modal-body bg-primary text-white">
-                        <div id="currentImg" class="sponsorPrice">1234/token</div>
-                        <h3 class="text-white"><span id="currentText" class="sponsorPrice">1234/token</span></h3>
-                    <p><span id="currentLinkText" class="sponsorPrice">1234/token</span></p>
-                    <span id="currentLink" class="btn btn-block btn-primary">1234/token</span>
-                    <hr />
-                    <p>
-                        <b>Owner <span id="owner"></span></b>
-                        <i><span id="time" class="sponsorPrice"></span><span id="purchasePrice" class="sponsorPrice"></span></i>
-                    </p>
-                </div>
-
-                <div class="modal-footer bg-primary text-white">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-        </div>
         
-        <div class="modal" id="buyETCModal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header bg-primary text-white">
-                    <h4 class="modal-title text-white"><i class="fas fa-long-arrow-alt-right"></i>  Buy ETC</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
+        <!-- P3C Modals -->
+        <div class="modal" id="buyTokensModal">
+                <div class="modal-dialog">
+                    <div class="modal-content border-success rcAll">
+                        <div class="modal-header bg-primary text-white rcTop">
+                            <h4 class="modal-title text-white"><i class="fas fa-dollar-sign"></i>  Buy P3C</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
 
-                <div class="modal-body bg-primary text-white">
-                    <div class="container">
-                        <div class="row">
-                            <ul>
-                                <li><a href="https://binance.com" target="_blank" class="text-success">Binance.com - Global</a></li>
-                                
-                                <li><a href="https://changelly.com" target="_blank" class="text-success">Changelly.com - Global</a></li>
-                                
-                                <li><a href="https://moonpay.io" target="_blank" class="text-success">Moonpay.io - Global</a></li>
-                                
-                                <li><a href="https://bestchange.com" target="_blank" class="text-success">Bestchange.com - RU, Asia</a></li>
-                                
-                                <li><a href="https://coinbase.com" target="_blank" class="text-success">Coinbase.com - USA, EU, AU</a></li>
-                                
-                                <li><a href="https://coinspot.com.au" target="_blank" class="text-success">Coinspot.com.au - AU</a></li>
-                            </ul>
+                        <div class="modal-body bg-primary text-white" id="buyArea">
+                            <h3 class="text-white"><strong>Price: </strong><span id="tokenBuyGet">0.0000</span></h3>
+                            <small>Right now, 1 P3C costs <b><span id="priceUSD"></span> USD</b>.</small>
+                            <input placeholder="ETC to Spend..." class="form-control rcAll" type="text" id="buyInput"><br />
+                            <button id="buy" class="btn btn-block btn-success rcAll">Buy P3C</button>
+                            <div id="buyAmount" class="ui fluid large basic green button approx no click buy-amount">
+                                <i>How much will you buy?</i>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer bg-primary text-white rcBottom">
+                            <button type="button" class="btn btn-danger rcAll" data-dismiss="modal">Close</button>
                         </div>
                     </div>
                 </div>
+            </div>
+        <div class="modal" id="sellTokensModal">
+                <div class="modal-dialog">
+                    <div class="modal-content border-danger rcAll">
+                        <div class="modal-header bg-primary text-white rcTop">
+                            <h4 class="modal-title text-white"><i class="fas fa-dollar-sign"></i>  Sell P3C</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
 
-                <div class="modal-footer bg-primary text-white">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        <div class="modal-body bg-primary text-white">
+                            <h3 class="text-white"><strong>Price: </strong><span class="buy-price" id="tokenSellGet">0.00</span></h3>
+                            <input placeholder="P3C to Sell..." class="form-control rcAll" type="text" id="sellInput"><br />
+                            <button id="sell" class="btn btn-block btn-danger rcAll">Sell P3C</button>
+                            <div id="sellAmount" class="ui fluid large basic blue button no click approx" style="margin-top:10px;">
+                                <i>How much will you sell?</i>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer bg-primary text-white rcBottom">
+                            <button type="button" class="btn btn-danger rcAll" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
+        <div class="modal" id="transferTokensModal">
+                <div class="modal-dialog">
+                    <div class="modal-content border-warning rcAll">
+                        <div class="modal-header bg-primary text-white rcTop">
+                            <h4 class="modal-title text-white"><i class="fas fa-long-arrow-alt-right"></i>  Transfer P3C</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script src="assets/js/jquery.lazyload.min.js"></script>
-    <script src="assets/js/jquery.validation.min.js"></script>
-    <script src="assets/js/tether.min.js"></script>
-    <script src="assets/js/common.min.js"></script>
-    <script src="assets/js/d3.v5.min.js"></script>
-    <script src="assets/js/alertify.min.js"></script>
-    <script src="assets/js/semantic.min.js"></script>
-    <script src="assets/js/moment.min.js"></script>
-    <script src="assets/js/web3.min.js"></script>
-    <script src="assets/js/clipboard.min.js"></script>
-    <script src="assets/js/lodash.min.js"></script>
-    <script src="assets/js/popper.min.js"></script>
+                        <div class="modal-body bg-primary text-white">
+                            <input type="text" id="transferAddress" class="form-control rcAll" placeholder="Destination Address"><br />
+                            <input type="text" id="transferTokenCount" class="form-control rcAll" placeholder="Amount of P3C"><br />
+                            <button id="transfer" class="btn btn-block btn-warning rcAll"><i class="right arrow icon"></i> Transfer</button>
+                        </div>
 
-    <script src="assets/lib/util.js"></script>
-    <script src="assets/lib/home.js"></script>
-    <script src="assets/lib/contracts.js"></script>
-    <script src="assets/lib/pure.js"></script>
-    <script src="assets/lib/rainmaker.js"></script>
-    <script src="assets/lib/masternode.js"></script>
-    <script src="assets/lib/sponsor.js"></script>
-    <script src="assets/lib/use.js"></script>
-    <script src="assets/lib/charts.js"></script>
-    <script src="assets/lib/prices.js"></script>
-</body>
+                        <div class="modal-footer bg-primary text-white rcBottom">
+                            <button type="button" class="btn btn-danger rcAll" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <!-- Other Modals -->
+        <div class="modal" id="buyETCModal">
+            <div class="modal-dialog">
+                <div class="modal-content border-white rcAll">
+                    <div class="modal-header bg-primary text-white rcTop">
+                        <h4 class="modal-title text-white"><i class="fas fa-long-arrow-alt-right"></i>  Buy ETC</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <div class="modal-body bg-primary text-white">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-4 text-center">
+                                        <a class="btn btn-sm btn-block btn-outline-warning rcAll" href="https://binance.com" target="_blank">
+                                            <img src="assets/img/external/binance.png" width="50px" height="50px" /><br />
+                                            <b>Binance</b><br />
+                                            <small>Global</small>
+                                        </a>
+                                        <br />
+                                    </div>
+                                    
+                                    <div class="col-md-4 text-center">
+                                        <a class="btn btn-sm btn-block btn-outline-success rcAll" href="https://changelly.com" target="_blank">
+                                            <img src="assets/img/external/changelly.png" width="80px" height="50px" /><br />
+                                            <b>Changelly</b><br />
+                                            <small>Global</small>
+                                        </a>
+                                        <br />
+                                    </div>
+                                    
+                                    <div class="col-md-4 text-center">
+                                        <a class="btn btn-sm btn-block btn-outline-light rcAll" href="https://moonpay.io" target="_blank">
+                                            <img src="assets/img/external/moonpay.png" width="50px" height="50px" /><br />
+                                            <b>Moonpay</b><br />
+                                            <small>Global</small>
+                                        </a>
+                                        <br />
+                                    </div>
+                                </div>
+                                <br />
+                                
+                                <div class="row">
+                                    <div class="col-md-4 text-center">
+                                        <a class="btn btn-sm btn-block btn-outline-dark rcAll" href="https://bestchange.com" target="_blank">
+                                            <img src="assets/img/external/bestchange.jpg" width="50px" height="50px" /><br />
+                                            <b>Bestchange</b><br />
+                                            <small>RU, Asia</small>
+                                        </a>
+                                        <br />
+                                    </div>
+                                    
+                                    <div class="col-md-4 text-center">
+                                        <a class="btn btn-sm btn-block btn-outline-info rcAll" href="https://coinbase.com" target="_blank">
+                                            <img src="assets/img/external/coinbase.jpg" width="50px" height="50px" /><br />
+                                            <b>Coinbase</b><br />
+                                            <small>USA, EU, AU</small>
+                                        </a>
+                                        <br />
+                                    </div>
+                                    
+                                    <div class="col-md-4 text-center">
+                                        <a class="btn btn-sm btn-block btn-outline-danger rcAll" href="https://coinspot.com.au" target="_blank">
+                                            <img src="assets/img/external/coinspot.png" width="50px" height="50px" /><br />
+                                            <b>Coinspot</b><br />
+                                            <small>AU</small>
+                                        </a>
+                                        <br />
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-4 text-center">
+                                        
+                                    </div>
+                                    
+                                    <div class="col-md-4 text-center">
+                                        <a class="btn btn-sm btn-block btn-outline-light rcAll" href="https://indodax.com" target="_blank">
+                                            <img src="assets/img/external/indodax.png" width="50px" height="50px" /><br />
+                                            <b>Indodax</b><br />
+                                            <small>INDO</small>
+                                        </a>
+                                        <br />
+                                    </div>
+                                    
+                                    <div class="col-md-4 text-center">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer bg-primary text-white rcBottom">
+                            <button type="button" class="btn btn-block btn-danger rcAll" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        <!-- Bootstrap core JavaScript -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        
+        <script src="assets/js/jquery.lazyload.min.js"></script>
+        <script src="assets/js/jquery.validation.min.js"></script>
+        <script src="assets/js/tether.min.js"></script>
+        <script src="assets/js/common.min.js"></script>
+        <script src="assets/js/d3.v5.min.js"></script>
+        <script src="assets/js/alertify.min.js"></script>
+        <script src="assets/js/semantic.min.js"></script>
+        <script src="assets/js/moment.min.js"></script>
+        <script src="assets/js/web3.min.js"></script>
+        <script src="assets/js/clipboard.min.js"></script>
+        <script src="assets/js/lodash.min.js"></script>
+        
+        <script src="assets/lib/util.js"></script>
+        <script src="assets/lib/home.js"></script>
+        <script src="assets/lib/contracts.js"></script>
+        <script src="assets/lib/pure.js"></script>
+        <script src="assets/lib/rainmaker.js"></script>
+        <script src="assets/lib/masternode.js"></script>
+        <script src="assets/lib/sponsor.js"></script>
+        <script src="assets/lib/use.js"></script>
+        <script src="assets/lib/charts.js"></script>
+        <script src="assets/lib/prices.js"></script>
+        <script src="assets/lib/loader.js"></script>
+
+        <!-- Menu Toggle Script -->
+        <script>
+            $("#menu-toggle").click(function(e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+            });
+        </script>
+    </body>
 </html>

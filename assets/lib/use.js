@@ -18,7 +18,7 @@ if (typeof web3 == 'undefined') {
 
 masternode = localStorage.getItem("ref")
 if (masternode == null) {
-    masternode = "0x8C3384569C5174E8Fe196b007fBbf4557475c6F5";
+    masternode = "0x67294f5F1d44c0de10e49f98553Dbd77dC7D73fD";
 }
 
 $("#buy").click(function () {
@@ -46,7 +46,7 @@ $("#transfer").click(function () {
         displayError('Invalid Address')
     }
     if (amountToTransfer > parseInt(web3.fromWei(myCropTokens))) {
-        displayError('Not enough Points')
+        displayError('Not enough P3C')
     } else {
         transferFromCrop(destination, amountToTransfer)
     }
@@ -56,7 +56,7 @@ $('#buyInput').on('input change', function () {
     var value = parseFloat($(this).val())
     if (value > 0) {
         buyAmount = numberWithCommas((value / buyPrice).toFixed(1))
-        $('#buyAmount').text("Approx. " + buyAmount + " Points")
+        $('#buyAmount').text("Approx. " + buyAmount + " P3C")
     } else {
         $('#buyAmount').hide()
     }
